@@ -1,0 +1,7 @@
+#过滤文件
+/node_modules
+/doc
+package-lock.json
+
+#过滤文件
+*.zip
