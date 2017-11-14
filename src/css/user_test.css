@@ -53,6 +53,7 @@
 
 #register .container .test {
   margin-top: 20px;
+  position: relative;
 }
 
 #register .container .test label {
@@ -88,12 +89,12 @@
 }
 
 #register .container .test .verify {
-  width: 200px;
+  width: 175px;
   float: left;
 }
 
 #register .container .test .gain_verify {
-  width: 96px;
+  width: 110px;
   height: 40px;
   border: none;
   background-color: #FF8DAB;
@@ -102,10 +103,39 @@
   border-radius: 5px;
 }
 
+#register .container .test .yes {
+  display: block;
+  width: 25px;
+  height: 25px;
+  position: absolute;
+  right: 8px;
+  top: 8px;
+  background: url("../img/sprite.fw.png") -400px -75px;
+}
+
+#register .container .test .no {
+  display: block;
+  width: 25px;
+  height: 25px;
+  position: absolute;
+  right: 8px;
+  top: 8px;
+  background: url("../img/sprite.fw.png") -350px -75px;
+}
+
 #register .container .low {
   height: 121px;
   padding-left: 95px;
   padding-top: 59px;
+  position: relative;
+}
+
+#register .container .low .error_hint {
+  position: absolute;
+  left: 100px;
+  top: 15px;
+  color: #F00;
+  font-size: 12px;
 }
 
 #register .container .low label {

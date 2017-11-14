@@ -52,7 +52,6 @@ $sprite:url('../img/sprite.fw.png');
             a{
                 @extend %dongtu;
             }
-            
         }
         .type:last-child{margin-right:0;}
         .type:hover a{padding-right:6px;}
