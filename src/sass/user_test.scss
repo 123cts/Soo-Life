@@ -1,0 +1,41 @@
+$sprite:url('../img/sprite.fw.png');
+#header_user{
+    height: 98px;border-bottom:2px solid #FE3F71;
+    h1{
+        width: 186px;height:60px;float:left;background:$sprite -60px 0 no-repeat;text-indent:-1000px;margin-top:19px;margin-right:20px;}
+    h2{float:left;font-size:18px;margin-top:60px;}
+}
+
+// 用户注册
+#register{
+    .container{ 
+        height: 596px;width: 440px;margin:0 auto;
+        .top{
+            width: 320px;height: 45px;padding-top:35px;padding-left:120px;
+            h4{
+                font-size:22px;color:#4D4D4D;float:left;
+            }
+            p{
+                font-size:10px;float:left;border-left:2px solid #4D4D4D;margin-top:10px;margin-left:6px;padding-left:5px;
+                a{color:#37A0DB;}
+            }
+        }
+        .test{
+            margin-top:20px;
+            label{width: 94px;float:left;padding-right:5px;text-align:right;font-size:14px;line-height: 40px;color:#4D4D4D;}
+            input{width: 290px;height: 39px;border:1px solid #999;padding-left:5px;}
+            .code{width: 150px;float:left;}
+            .rev_code{display:block;width: 140px;height: 35px;margin-left:10;float:left;text-align:center;line-height: 36px;}
+            .verify{width: 200px;float:left;}
+            .gain_verify{width: 96px;height:40px;border:none;background-color:#FF8DAB;color:#fff;margin-left:4px;border-radius:5px;}
+        }
+        .low{
+            height: 121px;padding-left:95px;padding-top:59px;
+            label{
+                font-size:12px;color:#4D4D4D;font-weight:bold;
+                a{font-weight:normal;}
+            }
+            #zhuce{width: 300px;height: 40px;margin-top:20px;background-color:#FE3F71;font-size:20px;color:#fff;text-align:center;line-height: 40px;border:none;}
+        }
+    }
+}

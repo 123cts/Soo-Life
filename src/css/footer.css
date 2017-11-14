@@ -1,0 +1,109 @@
+#footer {
+  height: 415px;
+}
+
+#footer #link {
+  height: 235px;
+}
+
+#footer #link .container dl {
+  height: 179px;
+  width: 95px;
+  float: left;
+  padding-left: 97px;
+  padding-top: 56px;
+}
+
+#footer #link .container dl dt {
+  position: relative;
+  height: 38px;
+  line-height: 38px;
+  color: #999999;
+}
+
+#footer #link .container dl dt i {
+  position: absolute;
+  left: -50px;
+  top: 2px;
+  font-size: 40px;
+}
+
+#footer #link .container dl dd a {
+  font-size: 12px;
+  height: 22px;
+  line-height: 22px;
+  color: #999999;
+}
+
+#footer #link .container dl a:hover {
+  color: #FFA800;
+}
+
+#footer #adv {
+  height: 70px;
+  background-color: #3B87EE;
+}
+
+#footer #adv .container a {
+  display: block;
+  float: left;
+  height: 37px;
+  margin-top: 10px;
+}
+
+#footer #adv .container a:first-child {
+  width: 335px;
+  background: url("../img/sprite.fw.png") 0px -70px no-repeat;
+}
+
+#footer #adv .container a:nth-child(2) {
+  width: 472px;
+  background: url("../img/sprite.fw.png") 0px -120px no-repeat;
+  margin-left: 41px;
+}
+
+#footer #adv .container a:last-child {
+  width: 311px;
+  background: url("../img/sprite.fw.png") 0px -170px no-repeat;
+  margin-left: 41px;
+}
+
+#footer #about {
+  height: 110px;
+}
+
+#footer #about .container ul {
+  width: 410px;
+  padding-top: 30px;
+  margin: 0 auto;
+}
+
+#footer #about .container ul li {
+  float: left;
+  height: 40px;
+}
+
+#footer #about .container ul li a {
+  font-size: 12px;
+  line-height: 40px;
+  padding: 0 9px;
+  border-right: 2px solid #eee;
+  color: #999;
+}
+
+#footer #about .container ul li:last-child a {
+  border-right: none;
+}
+
+#footer #about .container ul li:hover a {
+  color: #FFA800;
+}
+
+#footer #about .container p {
+  width: 400px;
+  font-size: 12px;
+  color: #999;
+  margin: 0 auto;
+  height: 20px;
+  text-align: center;
+}

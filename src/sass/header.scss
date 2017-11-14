@@ -1,0 +1,150 @@
+// 精灵图路径
+$sprite:url('../img/sprite.fw.png');
+// $hover:color:#FFA800;
+// 头部
+#header{
+    height:30px;
+    background-color:#F5F5F5;
+   #header_left{
+        float:left;
+        .welcome{color:#333;margin-left:5px; font-size:12px;float:left;line-height: 30px}
+        .h_l_ul{
+            float:left;
+            height:30px;
+            li{
+                float:left;
+                height:14px;
+                padding:5px 0;
+                a{padding:0 10px;border-right:2px solid #B099B0; font-size:12px;}
+
+                span{display:block;float:left;width:20px;height:19px;}
+                .weixin{background:$sprite 0 0 no-repeat;margin-left:10px;}
+                .weibo{background:$sprite -25px 0 no-repeat;}
+            }
+            li:hover a{color:#FFA800};
+        }
+   }
+   #header_right{
+        float:right;
+        li{
+            float:left;
+            padding:4px 0;
+            position:relative;
+            a{padding-left:10px;border-right:2px solid #B099B0; font-size:12px;color:#6CB2E6;padding-right:25px;}
+            i{position:absolute;right:5px;top:8px;color:#6CB2E6;}
+            .box{
+                width: 160px;border:1px solid #ccc;padding:4px 0;position:absolute;left:15px;top:33px;border-radius:5px;background-color:#fff;display:none;
+                .box_list{
+                    width: 160px;
+                    a{padding-left:10px;height: 20px;line-height: 20px;border-right:none;display:block;}
+                }
+                .box_list:hover{background-color:#eee;}
+            }
+        }
+        li:last-child{a{border-right:none;}}
+        li:nth-child(2){a{padding-right:10px;}}
+        li:hover>a{color:#FFA800};
+
+   } 
+}
+
+// 搜索栏
+#search{
+    height:100px;
+    h1{width: 186px;height:60px;float:left;background:$sprite -60px 0 no-repeat;text-indent:-1000px;margin-right:52px;margin-top:19px;}
+    .search_c{
+        width: 600px;padding:0 60px;float:left;padding-top:24px;
+        .search_c_t{
+            height:37px;
+            input{width: 490px;height: 30px;border-left:4px solid #37A0DB;border-right:3px solid #37A0DB;border-top:2px solid #37A0DB;border-bottom:3px solid #37A0DB;padding-left:5px;color:#A9A9A9;float:left;}
+            button{width: 88px;height:35px;background-color:#37A0DB;border-style:none;float:left;font-weight:bold;color:#fff;font-size:16px;font-family:"微软雅黑"}
+        }
+        .search_c_b{
+        height:25px;
+            li{
+                padding-left:12px;float:left;
+                a{border-right:2px solid #CCCCCC;color:#37A0DB;font-size:12px;padding-right:16px;}
+            }
+            li:first-child{padding-left:5px;}
+            li:last-child{a{border-right:none;}}
+            li:hover a{color:#2A4198;}
+        }
+    }
+    .search_r{
+        width: 210px;height:70px;margin-top:24px;float:right;
+        background:$sprite -270px 0 no-repeat;
+    }
+    
+}
+// 导航栏
+#nav{
+    height:38px;border-bottom:2px solid #FF3F72;
+    .nav_left{
+        float:left;width: 240px;height: 38px;background-color:#FF3F72;box-shadow:5px 5px 10px rgba(55, 55, 55, 0.4);
+        h3{
+            line-height: 38px;font-size:18px;color:#fff;position:relative;padding-left:25px;
+            i{position:absolute;left:150px;top:0px;}
+        }
+        .manus{z-index:1000;
+            width:240px;background-color:#FF5A85;box-shadow:5px 5px 10px rgba(55, 55, 55, 0.4);position:relative;
+            .manus_show{
+                width: 240px;height: 483px;
+                li{
+                    height: 40px;padding:0 25px;position:relative;
+                    a{display:block;height: 40px;line-height: 40px;font-size:14px;color:#fff; border-bottom:1px dotted #fff;}
+                    i{position:absolute;right:20px;top:15px;color:#fff;}
+                }
+                // li:last-child a{border-bottom:none;}
+                li:hover a{color:#333;}
+                li:hover{background-color:#fff;}
+                .manus_pannel{
+                    width: 0px;height:480px;box-shadow:5px 5px 10px rgba(55, 55, 55, 0.4);position:absolute;left:240px;top:3px;background-color:#fff;
+                    display:none;
+                    .three_level_manus{
+                        width: 690px;float:left;padding-top:10px;
+                        
+                        .aa{
+                            padding-top:5px;
+                            h4{
+                                width: 110px;text-align:right;padding-right:10px;float:left;margin-top:5px;
+                                a{font-size:14px;color:#333333;}
+                            }
+                            h5{width: 560px;border-bottom:1px dotted #eee;float:left;margin-right:10px;
+                                p{float:left;margin:5px 0;
+                                    a{height:20px;line-height: 20px;
+                                        padding:0 14px 0 10px;
+                                        border-left:1px solid #999999;color:#999999;font-size:12px;
+                                    }
+                                }
+                                p:hover a{color:#FFA800;}
+                            }
+                        }
+                    }
+                    .manus_brand{
+                        width: 270px;float:right;height:480px;background-color:#EEEEEE;
+                        a{display:block;width: 125px;height: 50px;float:left;margin-top:10px;margin-left:5px;}
+                        a:nth-child(1){background:$sprite -500px 0 no-repeat;}
+                        a:nth-child(2){background:$sprite -630px 0 no-repeat;}
+                        a:nth-child(3){background:$sprite -770px 0 no-repeat;}
+                        a:nth-child(4){background:$sprite -910px 0 no-repeat;}
+                        a:nth-child(5){background:$sprite -1045px 0 no-repeat;}
+                        a:nth-child(6){background:$sprite -500px -70px no-repeat;}
+                        a:nth-child(7){background:$sprite -630px -70px no-repeat;width: 255px;height: 120px;}
+                        a:nth-child(8){background:$sprite -910px -70px no-repeat;width: 255px;height: 120px;}
+                    }
+            }
+            }
+            
+        }
+    }
+    .nav_right{
+        float:left;
+        height:38px;
+        li{
+            float:left;
+            a{display:block;width: 123px;height: 38px;line-height: 38px;text-align:center;color:#555555;font-size:16px;}
+        }
+        li:first-child{a{color:#FF3F72;}}
+        li:hover a{color:#FF3F72;}
+    }
+}

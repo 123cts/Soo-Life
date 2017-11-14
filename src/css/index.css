@@ -1,0 +1,570 @@
+.min_width {
+  min-width: 1200px;
+  _width: 1200px;
+}
+
+#banner {
+  height: 480px;
+  background: #ccc;
+  overflow: hidden;
+  margin-left: -200px;
+  position: relative;
+}
+
+#banner ul {
+  position: absolute;
+  height: 480px;
+  overflow: hidden;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+
+#banner ul li {
+  float: left;
+}
+
+#banner img {
+  display: block;
+}
+
+#banner .next, #banner .prev {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translate(0, -50%);
+  padding: 10px 5px;
+  width: 30px;
+  height: 50px;
+  line-height: 50px;
+  background-color: rgba(0, 0, 0, 0.3);
+  text-align: center;
+  color: #fff;
+}
+
+#banner .next {
+  left: auto;
+  right: 0;
+}
+
+#banner .page {
+  position: absolute;
+  left: 50%;
+  bottom: 15px;
+  margin-left: 30px;
+  z-index: 10000;
+}
+
+#banner .page span {
+  display: inline-block;
+  margin: 0 5px;
+  width: 10px;
+  height: 10px;
+  background-color: #efefef;
+  border-radius: 50%;
+  color: #fff;
+  font-size: 2px;
+}
+
+#banner .page span.active {
+  background-color: #f60;
+  color: #fff;
+}
+
+#main_type .container .type a, #subject .container li a, #Referral .container .brand .brand_c li a, .brand .container .content .right .datu a, .brand .container .content .right .zhongtu a, .brand .container .content .right .hengtu a, .brand .container .content .right .xiaotu a {
+  display: block;
+  position: absolute;
+  right: 0px;
+  top: 0;
+  width: 100%;
+}
+
+#main_type .container .type a img, #subject .container li a img, #Referral .container .brand .brand_c li a img, .brand .container .content .right .datu a img, .brand .container .content .right .zhongtu a img, .brand .container .content .right .hengtu a img, .brand .container .content .right .xiaotu a img {
+  display: block;
+}
+
+#main_type .container {
+  padding: 10px 0;
+}
+
+#main_type .container .type {
+  height: 140px;
+  width: 232px;
+  margin-right: 10px;
+  float: left;
+  position: relative;
+  overflow: hidden;
+}
+
+#main_type .container .type:last-child {
+  margin-right: 0;
+}
+
+#main_type .container .type:hover a {
+  padding-right: 6px;
+}
+
+.Bar_Chart_1 .container {
+  height: 120px;
+}
+
+.Bar_Chart_1 .container img {
+  width: 100%;
+}
+
+.Bar_Chart_2 .container {
+  height: 90px;
+}
+
+.Bar_Chart_2 .container img {
+  width: 100%;
+}
+
+#subject .container {
+  height: 440px;
+}
+
+#subject .container li {
+  float: left;
+  width: 400px;
+  height: 220px;
+  position: relative;
+  overflow: hidden;
+}
+
+#subject .container li:hover a {
+  padding-right: 6px;
+}
+
+#Referral {
+  height: 450px;
+}
+
+#Referral .container h3 {
+  height: 29px;
+  font-size: 20px;
+  margin-top: 20px;
+  color: #333333;
+}
+
+#Referral .container .brand {
+  border: 1px solid #EFEFEF;
+  height: 400px;
+}
+
+#Referral .container .brand .brand_l {
+  width: 318px;
+  height: 400px;
+  float: left;
+}
+
+#Referral .container .brand .brand_c {
+  width: 662px;
+  height: 400px;
+  float: left;
+}
+
+#Referral .container .brand .brand_c li {
+  float: left;
+  width: 130px;
+  height: 79px;
+  border-right: 1px solid #eee;
+  border-bottom: 1px solid #eee;
+  position: relative;
+  overflow: hidden;
+}
+
+#Referral .container .brand .brand_c li:hover a {
+  padding-right: 6px;
+}
+
+#Referral .container .brand .brand_r {
+  width: 215px;
+  float: left;
+}
+
+#Referral .container .brand .brand_r a {
+  display: block;
+}
+
+#Referral .container .brand .brand_r a:first-child {
+  height: 240px;
+  border-bottom: 1px solid #eee;
+}
+
+#Referral .container .brand .brand_r a:first-child img {
+  width: 100%;
+  height: 100%;
+}
+
+#Referral .container .brand .brand_r a:last-child {
+  height: 150px;
+}
+
+#Referral .container .brand .brand_r a:last-child img {
+  width: 100%;
+  height: 100%;
+}
+
+.brand .container h3 {
+  height: 30px;
+  font-size: 20px;
+  color: #333;
+  margin-top: 20px;
+}
+
+.brand .container .content {
+  height: 500px;
+  border: 1px solid #eee;
+}
+
+.brand .container .content .left {
+  float: left;
+  width: 318px;
+}
+
+.brand .container .content .left a {
+  display: block;
+  width: 318px;
+}
+
+.brand .container .content .left a img {
+  width: 100%;
+  height: 100%;
+}
+
+.brand .container .content .left ul {
+  height: 182px;
+  padding: 0 72px;
+  padding-top: 20px;
+  background-color: #F9D6EC;
+}
+
+.brand .container .content .left ul li {
+  float: left;
+  width: 87px;
+}
+
+.brand .container .content .left ul li a {
+  width: 86px;
+  height: 28px;
+  font-size: 14px;
+  color: #5E6871;
+}
+
+.brand .container .content .left .food {
+  background-color: #F2F4E7;
+}
+
+.brand .container .content .left .use {
+  background-color: #EFCAFE;
+}
+
+.brand .container .content .left .electricity {
+  background-color: #A7D8F9;
+}
+
+.brand .container .content .left .nurse {
+  background-color: #F4FEE5;
+}
+
+.brand .container .content .left .bag {
+  background-color: #CFECFC;
+}
+
+.brand .container .content .right {
+  width: 880px;
+  float: left;
+  height: 249px;
+}
+
+.brand .container .content .right .r_top, .brand .container .content .right .r_bottom {
+  height: 250px;
+}
+
+.brand .container .content .right .ht {
+  width: 440px;
+  height: 250px;
+  float: left;
+}
+
+.brand .container .content .right .xt {
+  width: 440px;
+  height: 125px;
+  float: left;
+}
+
+.brand .container .content .right .datu {
+  float: left;
+  width: 439px;
+  height: 248px;
+  border-left: 1px solid #eee;
+  border-bottom: 1px solid #eee;
+  position: relative;
+  overflow: hidden;
+}
+
+.brand .container .content .right .zhongtu {
+  float: left;
+  width: 218.5px;
+  height: 249px;
+  border-left: 1px solid #eee;
+  border-bottom: 1px solid #eee;
+  position: relative;
+  overflow: hidden;
+}
+
+.brand .container .content .right .hengtu {
+  float: left;
+  width: 438px;
+  height: 124px;
+  border-left: 1px solid #eee;
+  border-bottom: 1px solid #eee;
+  position: relative;
+  overflow: hidden;
+}
+
+.brand .container .content .right .xiaotu {
+  width: 220px;
+  height: 125px;
+  float: left;
+  position: relative;
+  overflow: hidden;
+}
+
+.brand .container .content .right .zhongtu:hover a, .brand .container .content .right .datu:hover a, .brand .container .content .right .hengtu:hover a, .brand .container .content .right .xiaotu:hover a {
+  padding-right: 6px;
+}
+
+.brand .container .Bar_Chart {
+  margin-top: 10px;
+}
+
+.brand .container .you_like {
+  height: 390px;
+}
+
+.brand .container .you_like li {
+  float: left;
+  width: 230px;
+  height: 390px;
+  margin-right: 10px;
+  border: 1px solid #eee;
+}
+
+.brand .container .you_like li img {
+  width: 209px;
+  height: 200px;
+  margin: 10px 10px 0 10px;
+}
+
+.brand .container .you_like li a {
+  display: block;
+  margin-top: 33px;
+  height: 25px;
+  line-height: 25px;
+  font-size: 13px;
+  margin: 20px 15px;
+  color: #37A0DB;
+}
+
+.brand .container .you_like li span {
+  display: block;
+  height: 45px;
+  line-height: 45px;
+  margin: 20px 15px;
+  color: #F6AB00;
+}
+
+.brand .container .you_like li button {
+  width: 230px;
+  height: 35px;
+  border: none;
+  background-color: #FFA800;
+  color: #fff;
+  text-align: center;
+  margin-top: 15px;
+}
+
+.brand .container .you_like li:last-child {
+  margin-right: 0;
+}
+
+#stairs {
+  width: 40px;
+  height: 384px;
+  position: fixed;
+  left: 30px;
+  top: 50%;
+  margin-top: -140px;
+}
+
+#stairs ul li {
+  height: 40px;
+  margin-top: 6px;
+  background-color: #F7F7F7;
+}
+
+#stairs ul li a {
+  display: none;
+  width: 30px;
+  height: 30px;
+  border: 1px solid #FF5A85;
+  font-size: 12px;
+  color: #FF5A85;
+  padding: 4px;
+  text-align: center;
+}
+
+#stairs ul li i {
+  display: block;
+  width: 30px;
+  height: 30px;
+  border: 1px solid #ccc;
+  font-size: 26px;
+  color: #ccc;
+  padding: 4px;
+  text-align: center;
+  line-height: 30px;
+}
+
+#stairs ul li:hover a {
+  display: block;
+}
+
+#stairs ul li:hover i {
+  display: none;
+}
+
+#psn_bar .favicon .fa_login::before, #psn_bar .icon li span::before {
+  content: '';
+  width: 10px;
+  height: 10px;
+  transform: rotate(45deg);
+  position: absolute;
+}
+
+#psn_bar {
+  width: 35px;
+  height: 100%;
+  background-color: #30B1FB;
+  position: fixed;
+  right: 0;
+  top: 0;
+}
+
+#psn_bar .favicon i {
+  display: block;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  margin-top: 48px;
+  margin-left: 1px;
+  background: url("../img/sprite.fw.png") -520px -140px no-repeat;
+  background-color: #fff;
+}
+
+#psn_bar .favicon .fa_login {
+  width: 270px;
+  height: 180px;
+  position: absolute;
+  right: 34px;
+  top: 40px;
+  background: #fff;
+  box-shadow: 1px 1px 3px rgba(55, 55, 55, 0.4), -3px -2px 3px rgba(55, 55, 55, 0.4);
+  display: none;
+}
+
+#psn_bar .favicon .fa_login::before {
+  background: #fff;
+  right: -5px;
+  top: 20px;
+}
+
+#psn_bar .cart {
+  margin-top: 10px;
+}
+
+#psn_bar .cart a {
+  display: block;
+  width: 14px;
+  font-size: 12px;
+  color: #fff;
+  height: 55px;
+  padding: 30px 8px;
+  text-align: center;
+  position: relative;
+}
+
+#psn_bar .cart a i {
+  display: block;
+  color: #FFCC00;
+  font-size: 18px;
+  position: absolute;
+  left: 6px;
+  top: 10px;
+}
+
+#psn_bar .cart a span {
+  display: block;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: #C40000;
+  line-height: 20px;
+  position: absolute;
+  left: 6px;
+  bottom: 15px;
+}
+
+#psn_bar .icon li i, #psn_bar .to_top i {
+  display: block;
+  width: 30px;
+  height: 30px;
+  font-size: 22px;
+  margin: 10px 0;
+  text-align: center;
+}
+
+#psn_bar .icon li {
+  height: 30px;
+  padding: 10px 0;
+  position: relative;
+}
+
+#psn_bar .icon li i {
+  color: #FFCC00;
+}
+
+#psn_bar .icon li span {
+  display: block;
+  width: 90px;
+  height: 35px;
+  position: absolute;
+  right: 80px;
+  top: 17px;
+  background: #494949;
+  font-size: 14px;
+  color: #fff;
+  text-align: center;
+  line-height: 35px;
+  opacity: 0;
+}
+
+#psn_bar .icon li span::before {
+  right: -5px;
+  top: 50%;
+  margin-top: -5px;
+  background: #494949;
+}
+
+#psn_bar .to_top {
+  width: 30px;
+  height: 30px;
+  display: none;
+  margin-top: 30px;
+}
+
+#psn_bar .to_top i {
+  color: #fff;
+}

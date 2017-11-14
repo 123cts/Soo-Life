@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>会员注册|会员中心</title>
+    <link rel="stylesheet" type="text/css" href="../css/base.css" />
+    <link rel="stylesheet" type="text/css" href="../css/user_test.css" />
+    <link rel="stylesheet" type="text/css" href="../css/footer.css" />
+    <script src="../js/jquery-3.2.1.js"></script>
+    <script type="text/javascript">
+        jQuery(function($){
+            $('.footer').load('../html/footer.html');
+        })
+    </script>
+</head>
+<body> 
+    <header id="header_user">
+        <div class="container clearfix">
+            <h1>如此生活</h1>
+            <h2>注册中心</h2>
+        </div>
+    </header>
+    <div id="register">
+        <div class="container clearfix">
+            <form action="#">
+                <div class="top clearfix">
+                    <h4>欢迎注册</h4>
+                    <p>已有账号？现在去<a href="#">登录</a></p>
+                </div>
+                <div class="test clearfix">
+                    <label for="phone">手机:</label>
+                    <input type="text" id="phone" placeholder="建议常用手机"/>
+                </div>
+                <div class="test clearfix">
+                    <label for="code">验证码:</label>
+                    <input type="text" id="code" class="code" placeholder="请输入验证码"/>
+                    <span class="rev_code">sss</span>
+                </div>
+                <div class="test clearfix">
+                    <label for="verify">验证码:</label>
+                    <input type="text" id="verify" class="verify" />
+                    <button class="gain_verify">获取验证码</button>
+                </div>
+                <div class="test clearfix">
+                    <label for="password">密码:</label>
+                    <input type="text" id="password"  placeholder="请输密码"/>
+                </div>
+                <div class="test clearfix">
+                    <label for="check_pws">确认密码:</label>
+                    <input type="text" id="check_pws"  placeholder="再次确认密码"/>
+                </div>
+                <div class="low">
+                    <label><input type="checkbox" />我已经认真阅读并同意<a href="#">《如此生活服务协议》</a> </label>
+                    <button id="zhuce">立即注册</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- 底部 -->
+    <div class="footer">
+        
+    </div>
+</body>
+</html>
