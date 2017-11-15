@@ -25,6 +25,7 @@
   float: left;
   height: 14px;
   padding: 5px 0;
+  position: relative;
 }
 
 #header #header_left .h_l_ul li a {
@@ -84,8 +85,7 @@
   padding: 4px 0;
   position: absolute;
   left: 15px;
-  top: 33px;
-  border-radius: 5px;
+  top: 28px;
   background-color: #fff;
   display: none;
 }

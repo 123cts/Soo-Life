@@ -1,0 +1,37 @@
+$sprite:url('../img/sprite.fw.png');
+#header_login{
+    height: 98px;border-bottom:2px solid #FE3F71;
+    h1{margin-left:100px;
+        width: 186px;height:60px;float:left;background:$sprite -60px 0 no-repeat;text-indent:-1000px;margin-top:19px;margin-right:20px;}
+    h2{float:left;font-size:18px;margin-top:60px;}
+}
+.login_pannel{
+    height: 530px;
+    background:url('../img/banner_new.jpg');
+    background-size:cover;
+    background-position:center;
+    .container{
+        position:relative;height: 530px;
+        .login{
+            width: 360px;height: 400px;background-color:#fff;position:absolute;right:0;top:50%;margin-top:-200px;
+            h3{
+                height: 50px;background-color:#FD5A85;font-size:20px;color:#fff;text-align:center;line-height: 50px;   
+            }
+
+            form{padding:0 23px;background-color:#fff;height: 323px;
+                .log{
+                    height: 40px;margin-top:20px;position:relative;
+                    i{position:absolute;left:7px;top:7px;font-size:24px;color:#ccc}
+                    #Password,#username{
+                        padding-left:38px;
+                        width: 270px;
+                        height: 40px;border:1px solid #ccc;
+                    }
+                    button{width: 310px;height: 40px;background-color:#FD5A85;line-height: 40px;text-align:center;font-size:18px;border:none;color:#fff;}
+                    label,span{font-size:12px;line-height: 40px;float:left;}
+                    #forget{position:absolute;right:10px;}
+                }
+            }
+        }
+    }
+}

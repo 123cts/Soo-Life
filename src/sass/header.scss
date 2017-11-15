@@ -14,7 +14,7 @@ $sprite:url('../img/sprite.fw.png');
             li{
                 float:left;
                 height:14px;
-                padding:5px 0;
+                padding:5px 0;position:relative;
                 a{padding:0 10px;border-right:2px solid #B099B0; font-size:12px;}
 
                 span{display:block;float:left;width:20px;height:19px;}
@@ -33,7 +33,7 @@ $sprite:url('../img/sprite.fw.png');
             a{padding-left:10px;border-right:2px solid #B099B0; font-size:12px;color:#6CB2E6;padding-right:25px;}
             i{position:absolute;right:5px;top:8px;color:#6CB2E6;}
             .box{
-                width: 160px;border:1px solid #ccc;padding:4px 0;position:absolute;left:15px;top:33px;border-radius:5px;background-color:#fff;display:none;
+                width: 160px;border:1px solid #ccc;padding:4px 0;position:absolute;left:15px;top:28px;background-color:#fff;display:none;
                 .box_list{
                     width: 160px;
                     a{padding-left:10px;height: 20px;line-height: 20px;border-right:none;display:block;}
@@ -47,7 +47,6 @@ $sprite:url('../img/sprite.fw.png');
 
    } 
 }
-
 // 搜索栏
 #search{
     height:100px;

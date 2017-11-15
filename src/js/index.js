@@ -3,10 +3,11 @@ jQuery(function($){
     $('.header').load('html/header.html #header',function(){
 
         // 顶部(我的生活,帮助中心,导航更多)点击显示事件
+        
         $('#header_right').on('click','li',function(e){
             var $show = $(this).find('.box')
             if($show.css("display")=="none"){ 
-                $show.css("display","block");
+                $show.css({"display":"block","border-radius":"5px"});
                 $(this).siblings('li').find('.box').css("display","none"); 
             }else{ 
                 $show.css("display","none"); 

@@ -1,7 +1,7 @@
 $sprite:url('../img/sprite.fw.png');
 #header_user{
     height: 98px;border-bottom:2px solid #FE3F71;
-    h1{
+    h1{margin-left:100px;
         width: 186px;height:60px;float:left;background:$sprite -60px 0 no-repeat;text-indent:-1000px;margin-top:19px;margin-right:20px;}
     h2{float:left;font-size:18px;margin-top:60px;}
 }

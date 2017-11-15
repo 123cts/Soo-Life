@@ -1,0 +1,287 @@
+.erweima {
+  display: block;
+  width: 90px;
+  height: 90px;
+  position: absolute;
+  top: 30px;
+  background-image: url("../img/sina.jpg");
+  display: none;
+}
+
+.wb {
+  left: 40px;
+}
+
+.list_content .container h4 {
+  height: 45px;
+  padding-left: 10px;
+  font-size: 12px;
+  color: #37B3E9;
+  line-height: 45px;
+}
+
+.list_content .container .all {
+  border-top: 1px solid #eee;
+}
+
+.list_content .container .all .list_top {
+  background: #F7F5F5;
+  font-size: 12px;
+  border-bottom: 1px dotted #eee;
+}
+
+.list_content .container .all .list_top .list_top_l {
+  width: 100px;
+  padding-top: 21px;
+  text-align: right;
+  float: left;
+}
+
+.list_content .container .all .list_top .list_top_r {
+  background-color: #fff;
+  float: left;
+  width: 1000px;
+  padding-left: 9px;
+  overflow: hidden;
+}
+
+.list_content .container .all .list_top .list_top_r .barnd {
+  margin: 5px 10px;
+  margin-right: 96px;
+  border-top: 1px solid #ccc;
+  border-left: 1px solid #ccc;
+}
+
+.list_content .container .all .list_top .list_top_r .barnd li {
+  float: left;
+  width: 88px;
+  height: 38px;
+  border-right: 1px solid #ccc;
+  border-bottom: 1px solid #ccc;
+  position: relative;
+  padding: 5px;
+}
+
+.list_content .container .all .list_top .list_top_r .barnd li img {
+  width: 100%;
+  height: 100%;
+}
+
+.list_content .container .all .list_top .list_top_r .barnd li a {
+  display: none;
+  width: 98px;
+  height: 48px;
+  border: 1px solid #F6AD05;
+  position: absolute;
+  top: -1px;
+  left: -1px;
+  background: #fff;
+  line-height: 48px;
+  text-align: center;
+}
+
+.list_content .container .all .list_top .list_top_r .barnd li:hover a {
+  display: block;
+}
+
+.list_content .container .all .list_top .list_top_r .barnd li:hover img {
+  display: none;
+}
+
+.list_content .container .all .list_top .list_top_r .shop {
+  width: 1000px;
+}
+
+.list_content .container .all .list_top .list_top_r .shop li {
+  float: left;
+  height: 35px;
+  width: 70px;
+  margin-left: 20px;
+}
+
+.list_content .container .all .list_top .list_top_r .shop li a {
+  display: block;
+  white-space: nowrap;
+  width: 70px;
+  overflow: hidden;
+  line-height: 35px;
+  color: #333;
+}
+
+.list_content .container .all .list_top .list_top_r .shop li:hover a {
+  color: #4DB0E3;
+}
+
+.list_content .container .all .list_top .list_top_r .price {
+  height: 40px;
+  float: left;
+}
+
+.list_content .container .all .list_top .list_top_r .price li {
+  float: left;
+  height: 42px;
+}
+
+.list_content .container .all .list_top .list_top_r .price li a {
+  display: block;
+  width: 84px;
+  line-height: 45px;
+  text-align: center;
+  color: #889E9E;
+}
+
+.list_content .container .all .list_top .close1, .list_content .container .all .list_top .close2 {
+  display: block;
+  float: left;
+  width: 60px;
+  padding: 15px;
+  color: #2A64B0;
+}
+
+.list_content .container .goods {
+  border-top: 1px dotted #ccc;
+  margin-top: 12px;
+}
+
+.list_content .container .goods .goods_nav {
+  height: 32px;
+  border: 1px solid #ccc;
+}
+
+.list_content .container .goods .goods_nav ul {
+  border-left: 1px solid #ccc;
+}
+
+.list_content .container .goods .goods_nav ul li {
+  float: left;
+  width: 72px;
+  height: 32px;
+  font-size: 14px;
+  border-right: 1px solid #ccc;
+  line-height: 32px;
+  text-align: center;
+}
+
+.list_content .container .goods .goods_nav ul li a {
+  color: #727272;
+}
+
+.list_content .container .goods .goods_nav .goods_nav_r {
+  width: 300px;
+  float: right;
+  font-size: 14px;
+  height: 32px;
+  text-align: center;
+  line-height: 32px;
+}
+
+.list_content .container .goods .goods_nav .goods_nav_r p {
+  float: left;
+  width: 98px;
+}
+
+.list_content .container .goods .goods_nav .goods_nav_r .total {
+  float: left;
+  width: 55px;
+}
+
+.list_content .container .goods .goods_nav .goods_nav_r .pre, .list_content .container .goods .goods_nav .goods_nav_r .next {
+  float: right;
+  margin-right: 15px;
+  background-color: #fff;
+  margin-top: 5px;
+}
+
+.list_content .container .goods .goods_content {
+  padding: 10px 0;
+  background-color: #FBFBFB;
+}
+
+.list_content .container .goods .goods_content ul li {
+  float: left;
+  margin-bottom: 20px;
+  border: 1px solid #F5F5F5;
+  background-color: #fff;
+  height: 380px;
+  width: 223px;
+  margin-right: 20px;
+}
+
+.list_content .container .goods .goods_content ul li .Img {
+  width: 200px;
+  height: 200px;
+  padding-left: 15px;
+}
+
+.list_content .container .goods .goods_content ul li .Img img {
+  width: 100%;
+  height: 100%;
+}
+
+.list_content .container .goods .goods_content ul li .smallImg {
+  padding-left: 20px;
+  padding-top: 4px;
+  height: 37px;
+}
+
+.list_content .container .goods .goods_content ul li .smallImg img {
+  display: block;
+  width: 29px;
+  height: 29px;
+  border: 1px solid #37A0DB;
+}
+
+.list_content .container .goods .goods_content ul li .goods_tit {
+  padding-left: 17px;
+  height: 24px;
+  line-height: 24px;
+  color: #F6AB00;
+  font-size: 14px;
+}
+
+.list_content .container .goods .goods_content ul li .goods_name {
+  padding-left: 17px;
+  line-height: 20px;
+  font-size: 14px;
+  color: #37A8E5;
+}
+
+.list_content .container .goods .goods_content ul li .pri {
+  padding-left: 17px;
+  font-size: 20px;
+  color: #F6AB00;
+  height: 30px;
+  line-height: 30px;
+}
+
+.list_content .container .goods .goods_content ul li del {
+  font-size: 14px;
+}
+
+.list_content .container .goods .goods_content ul li .shp {
+  padding-left: 17px;
+  height: 20px;
+  font-size: 14px;
+  color: #787878;
+  line-height: 20px;
+}
+
+.list_content .container .goods .goods_content ul li .goods_btn {
+  height: 30px;
+}
+
+.list_content .container .goods .goods_content ul li .goods_btn button {
+  width: 111px;
+  border: none;
+  color: #fff;
+  text-align: center;
+  line-height: 30px;
+}
+
+.list_content .container .goods .goods_content ul li .goods_btn .addCar {
+  background-color: #F6AB00;
+}
+
+.list_content .container .goods .goods_content ul li .goods_btn .care {
+  background-color: #37A0DB;
+}

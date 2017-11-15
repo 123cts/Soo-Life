@@ -1,0 +1,101 @@
+#header_login {
+  height: 98px;
+  border-bottom: 2px solid #FE3F71;
+}
+
+#header_login h1 {
+  margin-left: 100px;
+  width: 186px;
+  height: 60px;
+  float: left;
+  background: url("../img/sprite.fw.png") -60px 0 no-repeat;
+  text-indent: -1000px;
+  margin-top: 19px;
+  margin-right: 20px;
+}
+
+#header_login h2 {
+  float: left;
+  font-size: 18px;
+  margin-top: 60px;
+}
+
+.login_pannel {
+  height: 530px;
+  background: url("../img/banner_new.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+.login_pannel .container {
+  position: relative;
+  height: 530px;
+}
+
+.login_pannel .container .login {
+  width: 360px;
+  height: 400px;
+  background-color: #fff;
+  position: absolute;
+  right: 0;
+  top: 50%;
+  margin-top: -200px;
+}
+
+.login_pannel .container .login h3 {
+  height: 50px;
+  background-color: #FD5A85;
+  font-size: 20px;
+  color: #fff;
+  text-align: center;
+  line-height: 50px;
+}
+
+.login_pannel .container .login form {
+  padding: 0 23px;
+  background-color: #fff;
+  height: 323px;
+}
+
+.login_pannel .container .login form .log {
+  height: 40px;
+  margin-top: 20px;
+  position: relative;
+}
+
+.login_pannel .container .login form .log i {
+  position: absolute;
+  left: 7px;
+  top: 7px;
+  font-size: 24px;
+  color: #ccc;
+}
+
+.login_pannel .container .login form .log #Password, .login_pannel .container .login form .log #username {
+  padding-left: 38px;
+  width: 270px;
+  height: 40px;
+  border: 1px solid #ccc;
+}
+
+.login_pannel .container .login form .log button {
+  width: 310px;
+  height: 40px;
+  background-color: #FD5A85;
+  line-height: 40px;
+  text-align: center;
+  font-size: 18px;
+  border: none;
+  color: #fff;
+}
+
+.login_pannel .container .login form .log label, .login_pannel .container .login form .log span {
+  font-size: 12px;
+  line-height: 40px;
+  float: left;
+}
+
+.login_pannel .container .login form .log #forget {
+  position: absolute;
+  right: 10px;
+}
