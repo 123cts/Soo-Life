@@ -1,9 +1,68 @@
+.min_width {
+  min-width: 1200px;
+  _width: 1200px;
+}
+
 .erweima{
    display:block;width: 90px;height: 90px;position:absolute;top:30px;
     background-image:url('../img/sina.jpg');
     display:none;
 }
 .wb{left:40px;}
+
+%good_item{
+    padding:10px 0; background-color:#FBFBFB;
+    ul{
+       
+        li{margin-bottom:20px;margin-right:15px;
+            float:left;border:1px solid #F5F5F5;background-color:#fff;width: 223px;                  
+            
+            .Img{
+                width: 200px;height: 200px;padding-left:15px;
+                img{width:100%;height:100%}
+            }
+            .smallImg{
+                padding-left:20px;padding-top:4px;height: 37px;
+                img{display:block;width: 29px;height: 29px;border:1px solid #37A0DB;}
+            }
+            .goods_tit{
+                padding-left:17px;
+                height: 24px;line-height: 24px;color:#F6AB00;font-size:14px;
+            }
+            .goods_name{
+                padding-left:17px;
+                line-height: 20px;font-size:14px;color:#37A8E5;
+            }
+            .pri{
+                padding-left:17px;
+                font-size:20px;color:#F6AB00;height: 30px;line-height: 30px;
+            }
+            del{font-size:14px;}
+            .shp{
+                padding-left:17px;
+                height: 20px;
+                font-size:14px;
+                color:#787878;
+                line-height: 20px;
+            }
+            .goods_btn{
+               height: 30px;
+               button{
+                    width: 111px;
+                    border:none;
+                    color:#fff;text-align:center;
+                    line-height: 30px;
+               } 
+               .addCar{
+                background-color:#F6AB00;
+               }
+               .care{
+                background-color:#37A0DB;
+               }
+            }
+        }
+    }
+}
 
 .list_content{
     .container{
@@ -86,60 +145,55 @@
                 }
             }
             .goods_content{
-                padding:10px 0; background-color:#FBFBFB;
+               @extend %good_item;
+            }
+            .goods_pages{
+                height: 80px;
+                margin-bottom:30px;
                 ul{
-                   
+                   margin-left:250px;padding-top:29px;float:left;
                     li{
-                        float:left;margin-bottom:20px;border:1px solid #F5F5F5;background-color:#fff;height: 380px;width: 223px;margin-right:20px;                      
-                        
-                        .Img{
-                            width: 200px;height: 200px;padding-left:15px;
-                            img{width:100%;height:100%}
-                        }
-                        .smallImg{
-                            padding-left:20px;padding-top:4px;height: 37px;
-                            img{display:block;width: 29px;height: 29px;border:1px solid #37A0DB;}
-                        }
-                        .goods_tit{
-                            padding-left:17px;
-                            height: 24px;line-height: 24px;color:#F6AB00;font-size:14px;
-                        }
-                        .goods_name{
-                            padding-left:17px;
-                            line-height: 20px;font-size:14px;color:#37A8E5;
-                        }
-                        .pri{
-                            padding-left:17px;
-                            font-size:20px;color:#F6AB00;height: 30px;line-height: 30px;
-                        }
-                        del{font-size:14px;}
-                        .shp{
-                            padding-left:17px;
-                            height: 20px;
-                            font-size:14px;
-                            color:#787878;
-                            line-height: 20px;
-                        }
-                        .goods_btn{
-                           height: 30px;
-                           button{
-                                width: 111px;
-                                border:none;
-                                color:#fff;text-align:center;
-                                line-height: 30px;
-                           } 
-                           .addCar{
-                            background-color:#F6AB00;
-                           }
-                           .care{
-                            background-color:#37A0DB;
-                           }
-                        }
+                        float:left;
+                        padding:7px;
+                        border:1px solid #E2E0E0;
+                        margin-right:5px;
+                        font-size:12px;color:#333;
+                    }
+                }
+                .pa{
+                    padding-top:29px;
+                    float:left;
+                    margin-right:0px;
+                    border:none;
+                    width: 170px;
+                    height: 30px;
+                    padding-left:3px;
+                    input{
+                        width: 35px;border:1px solid #E2E0E0;
+                        margin:0 5px;
+                    }
+                    button{
+                        width: 44px;height: 30px;background-color:#37A0DB;
+                        color:#fff;line-height: 30px;
+                        border:none;margin-left:12px;
                     }
                 }
             }
         }
         
+    }
+}
+.active{background-color:#EF8F01;color:#fff;}
+.hot_sales{
+    .container{
+        height: 450px;
+        h4{
+            height: 40px;background-color:#37A0DB;
+            color:#fff;padding-left:20px;font-size:18px;line-height: 40px;
+        }
+        .hot_rem{
+            @extend %good_item;
+        }
     }
     
 }

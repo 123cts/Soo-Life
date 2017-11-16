@@ -38,6 +38,59 @@
         });
     });
 
+    $(".footer").load("../html/footer.html #footer");
+    $(".psn_bar").load("../html/header.html #psn_bar",function(){
+        // 右导航栏实现的动画
+        $('.favicon').on('mouseover',function(){
+            $(this).find('.fa_login').show();
+        }).on('mouseout',function(){
+            $(this).find('.fa_login').hide();
+        });
+        $('.icon').on('mouseenter','a',function(){
+            $(this).next('span').stop().animate({right:35,opacity:1})
+        }).on('mouseleave','a',function(){
+             $(this).next('span').stop().animate({right:80,opacity:0});
+        });
+        // 获取滚动高度
+        var to_top = document.querySelector('.to_top');
+         window.onscroll = function(){
+                var scrollTop = window.scrollY;
+
+                if(scrollY > 500){
+                    to_top.style.display = 'block';
+                }else{
+                    to_top.style.display = 'none';
+                }
+
+            }
+
+            // 点击楼梯去到相对应的商品位置
+            $('#stairs ul li').click(function(e) {
+                 $(document).scrollTop($('.louti .brand').eq($(this).index()).offset().top);  
+                 return false;
+            });
+            //返回顶部效果
+            var timer;
+             to_top.onclick = function(){
+                clearInterval(timer);
+                
+                var btn_to_top = window.scrollY;
+
+                timer = setInterval(function(){
+
+                    var speed = btn_to_top/10;
+
+                    btn_to_top -= speed;
+
+                    if(btn_to_top<=0 || speed<5){
+                        clearInterval(timer);
+                        btn_to_top = 0;
+                    }
+                    scrollTo(0,btn_to_top);
+                }, 20);
+            }
+
+     });
     // 请求商品图标数据
     var xhr_brand_icon = new XMLHttpRequest();
     xhr_brand_icon.onload = function(){
@@ -88,21 +141,62 @@
         }
     });
 
+
+    // 请求商品数据
+    var pageNo = 1;
+    var qty = 20;
     var xhr_goods = new XMLHttpRequest();
     xhr_goods.onload = function(){
         if(xhr_goods.status == 200 || xhr_goods.status == 304){
             var res =JSON.parse(xhr_goods.responseText);
            
-
-            var list = res.map(function(item){ 
+            var list = res.data.map(function(item){ 
                 var img= JSON.parse(item.Imgurl);
-                console.log(JSON.parse(item.Imgurl)[0]);
                 // var aa = item.Imgurl
-                return '<li><div class="Img"><img src="'+img[1]+'"/></div><div class="smallImg"><img src="'+img[0]+'"/></div><p class="goods_name">'+item.name+'</p><p class="goods_tit">'+item.title+'</p><span class="pri">￥'+item.price+'</span><del>'+item.consult+'</del><p class="shp">'+item.shop+'</p><div class="goods_btn"><button class="addCar"><i></i>加入购物车</button><button class="care"><i></i>关注商品</button></div></li>'
-            });
-            $('<ul/>').html(list).appendTo($('.goods_content'));
+                return '<li><div class="Img"><img src="'+img[0]+'"/></div><div class="smallImg"><img src="'+img[0]+'"/></div><p class="goods_name">'+item.name+'</p><p class="goods_tit">'+item.title+'</p><span class="pri">￥'+item.price+'</span><del>'+item.consult+'</del><p class="shp">'+item.shop+'</p><div class="goods_btn"><button class="addCar"><i></i>加入购物车</button><button class="care"><i></i>关注商品</button></div></li>'
+            }).join('');
+
+            var $res = $('<ul/>').html(list)
+            $('.goods_content').innerHTML = '';
+            $('.goods_content').html($res)
+
+            // 生成分页
+            var page_len = Math.ceil(res.total/qty);
+            $('.goods_pages').html('')
+            $('.goods_nav_r').html('')
+            var $ul = $('<ul/>');
+            $ul.append($('<li/>').html('首页'))
+            for(var i=0;i<page_len;i++){
+                var $li = $('<li/>').html( i+1 );
+                if(i+1 === pageNo){
+                    $li.addClass('active');
+                }
+
+                $ul.append($li);
+            }
+            $ul.append($('<li/>').html('>'))
+            $ul.append($('<li/>').html('尾页'))
+
+            var $pa = $('<div/>').addClass('pa').html(`共<span>${page_len}</span>页<input type="text" />页<button>确定</button>`)
+
+           
+            // 将分页添加到页面
+            $('.goods_pages').append($ul);
+            $('.goods_pages').append($pa);
+            var pa2 = `<p>共<span>${res.total}</span>个商品</p>
+                            <div class="total"><span>${$('.goods_pages').find('.active').html()}</span>/<span>${page_len}</span>页</div>
+                            <button class="pre">上一页</button>
+                            <button class="next">下一页</button>`
+            $('.goods_nav_r').html(pa2);
         }
     }
-    xhr_goods.open("get",'../api/goods.php',true);
+    xhr_goods.open("get",`../api/goods.php?pageNo=${pageNo}&qty=${qty}`,true);
     xhr_goods.send();
+
+    $('.goods_pages').on('click','li',function(){
+        pageNo = this.innerText*1;
+        xhr_goods.open("get",`../api/goods.php?pageNo=${pageNo}&qty=${qty}`,true);
+        xhr_goods.send();
+    });
+
 })(jQuery);

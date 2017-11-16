@@ -1,3 +1,8 @@
+.min_width {
+  min-width: 1200px;
+  _width: 1200px;
+}
+
 .erweima {
   display: block;
   width: 90px;
@@ -10,6 +15,99 @@
 
 .wb {
   left: 40px;
+}
+
+.list_content .container .goods .goods_content, .hot_sales .container .hot_rem {
+  padding: 10px 0;
+  background-color: #FBFBFB;
+}
+
+.list_content .container .goods .goods_content ul li, .hot_sales .container .hot_rem ul li {
+  margin-bottom: 20px;
+  margin-right: 15px;
+  float: left;
+  border: 1px solid #F5F5F5;
+  background-color: #fff;
+  width: 223px;
+}
+
+.list_content .container .goods .goods_content ul li .Img, .hot_sales .container .hot_rem ul li .Img {
+  width: 200px;
+  height: 200px;
+  padding-left: 15px;
+}
+
+.list_content .container .goods .goods_content ul li .Img img, .hot_sales .container .hot_rem ul li .Img img {
+  width: 100%;
+  height: 100%;
+}
+
+.list_content .container .goods .goods_content ul li .smallImg, .hot_sales .container .hot_rem ul li .smallImg {
+  padding-left: 20px;
+  padding-top: 4px;
+  height: 37px;
+}
+
+.list_content .container .goods .goods_content ul li .smallImg img, .hot_sales .container .hot_rem ul li .smallImg img {
+  display: block;
+  width: 29px;
+  height: 29px;
+  border: 1px solid #37A0DB;
+}
+
+.list_content .container .goods .goods_content ul li .goods_tit, .hot_sales .container .hot_rem ul li .goods_tit {
+  padding-left: 17px;
+  height: 24px;
+  line-height: 24px;
+  color: #F6AB00;
+  font-size: 14px;
+}
+
+.list_content .container .goods .goods_content ul li .goods_name, .hot_sales .container .hot_rem ul li .goods_name {
+  padding-left: 17px;
+  line-height: 20px;
+  font-size: 14px;
+  color: #37A8E5;
+}
+
+.list_content .container .goods .goods_content ul li .pri, .hot_sales .container .hot_rem ul li .pri {
+  padding-left: 17px;
+  font-size: 20px;
+  color: #F6AB00;
+  height: 30px;
+  line-height: 30px;
+}
+
+.list_content .container .goods .goods_content ul li del, .hot_sales .container .hot_rem ul li del {
+  font-size: 14px;
+}
+
+.list_content .container .goods .goods_content ul li .shp, .hot_sales .container .hot_rem ul li .shp {
+  padding-left: 17px;
+  height: 20px;
+  font-size: 14px;
+  color: #787878;
+  line-height: 20px;
+}
+
+.list_content .container .goods .goods_content ul li .goods_btn, .hot_sales .container .hot_rem ul li .goods_btn {
+  height: 30px;
+}
+
+.list_content .container .goods .goods_content ul li .goods_btn button, .hot_sales .container .hot_rem ul li .goods_btn button {
+  width: 111px;
+  border: none;
+  color: #fff;
+  text-align: center;
+  line-height: 30px;
+}
+
+.list_content .container .goods .goods_content ul li .goods_btn .addCar, .hot_sales .container .hot_rem ul li .goods_btn .addCar {
+  background-color: #F6AB00;
+}
+
+.list_content .container .goods .goods_content ul li .goods_btn .care, .hot_sales .container .hot_rem ul li .goods_btn .care {
+  background-color: #37A0DB;
 }
 
 .list_content .container h4 {
@@ -192,96 +290,66 @@
   margin-top: 5px;
 }
 
-.list_content .container .goods .goods_content {
-  padding: 10px 0;
-  background-color: #FBFBFB;
+.list_content .container .goods .goods_pages {
+  height: 80px;
+  margin-bottom: 30px;
 }
 
-.list_content .container .goods .goods_content ul li {
+.list_content .container .goods .goods_pages ul {
+  margin-left: 250px;
+  padding-top: 29px;
   float: left;
-  margin-bottom: 20px;
-  border: 1px solid #F5F5F5;
-  background-color: #fff;
-  height: 380px;
-  width: 223px;
-  margin-right: 20px;
 }
 
-.list_content .container .goods .goods_content ul li .Img {
-  width: 200px;
-  height: 200px;
-  padding-left: 15px;
+.list_content .container .goods .goods_pages ul li {
+  float: left;
+  padding: 7px;
+  border: 1px solid #E2E0E0;
+  margin-right: 5px;
+  font-size: 12px;
+  color: #333;
 }
 
-.list_content .container .goods .goods_content ul li .Img img {
-  width: 100%;
-  height: 100%;
-}
-
-.list_content .container .goods .goods_content ul li .smallImg {
-  padding-left: 20px;
-  padding-top: 4px;
-  height: 37px;
-}
-
-.list_content .container .goods .goods_content ul li .smallImg img {
-  display: block;
-  width: 29px;
-  height: 29px;
-  border: 1px solid #37A0DB;
-}
-
-.list_content .container .goods .goods_content ul li .goods_tit {
-  padding-left: 17px;
-  height: 24px;
-  line-height: 24px;
-  color: #F6AB00;
-  font-size: 14px;
-}
-
-.list_content .container .goods .goods_content ul li .goods_name {
-  padding-left: 17px;
-  line-height: 20px;
-  font-size: 14px;
-  color: #37A8E5;
-}
-
-.list_content .container .goods .goods_content ul li .pri {
-  padding-left: 17px;
-  font-size: 20px;
-  color: #F6AB00;
-  height: 30px;
-  line-height: 30px;
-}
-
-.list_content .container .goods .goods_content ul li del {
-  font-size: 14px;
-}
-
-.list_content .container .goods .goods_content ul li .shp {
-  padding-left: 17px;
-  height: 20px;
-  font-size: 14px;
-  color: #787878;
-  line-height: 20px;
-}
-
-.list_content .container .goods .goods_content ul li .goods_btn {
-  height: 30px;
-}
-
-.list_content .container .goods .goods_content ul li .goods_btn button {
-  width: 111px;
+.list_content .container .goods .goods_pages .pa {
+  padding-top: 29px;
+  float: left;
+  margin-right: 0px;
   border: none;
-  color: #fff;
-  text-align: center;
-  line-height: 30px;
+  width: 170px;
+  height: 30px;
+  padding-left: 3px;
 }
 
-.list_content .container .goods .goods_content ul li .goods_btn .addCar {
-  background-color: #F6AB00;
+.list_content .container .goods .goods_pages .pa input {
+  width: 35px;
+  border: 1px solid #E2E0E0;
+  margin: 0 5px;
 }
 
-.list_content .container .goods .goods_content ul li .goods_btn .care {
+.list_content .container .goods .goods_pages .pa button {
+  width: 44px;
+  height: 30px;
   background-color: #37A0DB;
+  color: #fff;
+  line-height: 30px;
+  border: none;
+  margin-left: 12px;
+}
+
+.active {
+  background-color: #EF8F01;
+  color: #fff;
+}
+
+.hot_sales .container {
+  height: 450px;
+}
+
+.hot_sales .container h4 {
+  height: 40px;
+  background-color: #37A0DB;
+  color: #fff;
+  padding-left: 20px;
+  font-size: 18px;
+  line-height: 40px;
 }
