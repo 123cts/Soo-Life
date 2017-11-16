@@ -141,10 +141,11 @@
         }
     });
 
-
+    var to = 1;
     // 请求商品数据
     var pageNo = 1;
     var qty = 20;
+    var current_page;
     var xhr_goods = new XMLHttpRequest();
     xhr_goods.onload = function(){
         if(xhr_goods.status == 200 || xhr_goods.status == 304){
@@ -153,7 +154,7 @@
             var list = res.data.map(function(item){ 
                 var img= JSON.parse(item.Imgurl);
                 // var aa = item.Imgurl
-                return '<li><div class="Img"><img src="'+img[0]+'"/></div><div class="smallImg"><img src="'+img[0]+'"/></div><p class="goods_name">'+item.name+'</p><p class="goods_tit">'+item.title+'</p><span class="pri">￥'+item.price+'</span><del>'+item.consult+'</del><p class="shp">'+item.shop+'</p><div class="goods_btn"><button class="addCar"><i></i>加入购物车</button><button class="care"><i></i>关注商品</button></div></li>'
+                return '<li id="'+item.id+'"><div class="Img"><img src="'+img[0]+'"/></div><div class="smallImg"><img src="'+img[0]+'"/></div><p class="goods_name">'+item.name+'</p><p class="goods_tit">'+item.title+'</p><span class="pri">￥'+item.price+'</span><del>'+item.consult+'</del><p class="shp">'+item.shop+'</p><div class="goods_btn"><button class="addCar"><i></i>加入购物车</button><button class="care"><i></i>关注商品</button></div></li>'
             }).join('');
 
             var $res = $('<ul/>').html(list)
@@ -177,26 +178,112 @@
             $ul.append($('<li/>').html('>'))
             $ul.append($('<li/>').html('尾页'))
 
-            var $pa = $('<div/>').addClass('pa').html(`共<span>${page_len}</span>页<input type="text" />页<button>确定</button>`)
-
+            var $pa = $('<div/>').addClass('pa').html(`共<span>${page_len}</span>页<input type="text" class="ge"/>页<button class="skip_page">确定</button>`)
            
             // 将分页添加到页面
             $('.goods_pages').append($ul);
             $('.goods_pages').append($pa);
+
+            current_page = $('.goods_pages').find('.active').html()
             var pa2 = `<p>共<span>${res.total}</span>个商品</p>
-                            <div class="total"><span>${$('.goods_pages').find('.active').html()}</span>/<span>${page_len}</span>页</div>
-                            <button class="pre">上一页</button>
-                            <button class="next">下一页</button>`
+                            <div class="total"><span>${current_page}</span>/<span>${page_len}</span>页</div>
+                            <button class="next">下一页</button><button class="pre">上一页</button>`;
             $('.goods_nav_r').html(pa2);
+
+            to = page_len;
+
+
+             $('.skip_page').on('click',function(){
+                var ge = document.querySelector('.ge').value;
+                pageNo = ge*1;
+                console.log(pageNo);
+                xhr_goods.open("get",`../api/goods.php?pageNo=${pageNo}&qty=${qty}`,true);
+                xhr_goods.send();
+            });
+             // 上一页
+            $('.pre').on('click',function(){
+                
+                pageNo = pageNo -1;
+                if(pageNo<=0){
+                    pageNo = 1;
+                    alert('已经是第一页了！')
+                }
+                xhr_goods.open("get",`../api/goods.php?pageNo=${pageNo}&qty=${qty}`,true);
+                xhr_goods.send();
+            });
+
+            //下一页
+            $('.next').on('click',function(){
+                console.log(666)
+                pageNo = pageNo + 1;
+                if(pageNo>page_len){
+                    pageNo = page_len;
+                     alert('已经是最后一页了！')
+                }
+                xhr_goods.open("get",`../api/goods.php?pageNo=${pageNo}&qty=${qty}`,true);
+                xhr_goods.send();
+            });
+
+
+            // 将列表页所点击对应商品的id传入详情页(传递参数)
+            $('.goods_content').on('click','li',function(){
+                res = '?';
+                res += 'id='+this.id;
+                // console.log('detail_pages.html'+res)
+                location.href = 'detail_pages.html'+res
+            })
         }
     }
     xhr_goods.open("get",`../api/goods.php?pageNo=${pageNo}&qty=${qty}`,true);
     xhr_goods.send();
 
+
+    // 点击页数
     $('.goods_pages').on('click','li',function(){
         pageNo = this.innerText*1;
+        if(this.innerText == '首页'){
+            pageNo = 1;
+        }else if(this.innerText == '>'){
+
+            var tol = $(this).parent('ul').find('.active').html()*1+1;
+            if(tol>to){
+                tol=to;
+                alert('已经是最后一页了！')
+            }
+            pageNo = tol;
+        }else if(this.innerText == '尾页'){
+            pageNo = to;
+        }
         xhr_goods.open("get",`../api/goods.php?pageNo=${pageNo}&qty=${qty}`,true);
         xhr_goods.send();
     });
+
+    var hotNo=1;
+    var hotqty = 5;
+    // 获取热门商品
+    var xhr_goods_hot = new XMLHttpRequest();
+    xhr_goods_hot.onload = function(){
+        if(xhr_goods_hot.status == 200 || xhr_goods_hot.status == 304){
+            var res = JSON.parse(xhr_goods_hot.responseText);
+
+            var list = res.data.map(function(item){
+                var img= JSON.parse(item.Imgurl);
+                // var aa = item.Imgurl
+                return '<li id="'+item.id+'"><div class="Img"><img src="'+img[0]+'"/></div><div class="smallImg"><img src="'+img[0]+'"/></div><p class="goods_name">'+item.name+'</p><p class="goods_tit">'+item.title+'</p><span class="pri">￥'+item.price+'</span><del>'+item.consult+'</del><p class="shp">'+item.shop+'</p><div class="goods_btn"><button class="addCar"><i></i>加入购物车</button><button class="care"><i></i>关注商品</button></div></li>'
+            })
+            var $ul = $('<ul/>').html(list)
+            $('.hot_rem').html($ul );
+
+             // 将列表页所点击对应商品的id传入详情页(传递参数)
+            $('.hot_rem').on('click','li',function(){
+                res = '?';
+                res += 'id='+this.id;
+                // console.log('detail_pages.html'+res)
+                location.href = 'detail_pages.html'+res
+            })
+        }
+    }
+    xhr_goods_hot.open("get",`../api/goods_hot.php?pageNo=${hotNo}&qty=${hotqty}`,true);
+    xhr_goods_hot.send();
 
 })(jQuery);

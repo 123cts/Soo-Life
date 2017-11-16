@@ -1,0 +1,471 @@
+.min_width {
+  min-width: 1200px;
+  _width: 1200px;
+}
+
+.shopIcom .container {
+  height: 120px;
+}
+
+.shopIcom .container img {
+  width: 100%;
+  height: 100%;
+}
+
+.nav {
+  height: 40px;
+  background-color: #F3A500;
+}
+
+.nav .container .left {
+  float: left;
+}
+
+.nav .container .left, .nav .container .right {
+  border-left: 1px solid #EF8F01;
+  border-right: 1px solid #EF8F01;
+}
+
+.nav .container .left li, .nav .container .right li {
+  float: left;
+  border-right: 1px solid #EF8F01;
+}
+
+.nav .container .left li a, .nav .container .right li a {
+  display: block;
+  width: 119px;
+  line-height: 40px;
+  text-align: center;
+  color: #fff;
+  font-size: 15px;
+}
+
+.nav .container .left .fenlei, .nav .container .left .youhui, .nav .container .right .fenlei, .nav .container .right .youhui {
+  width: 200px;
+}
+
+.nav .container .left .fenlei a, .nav .container .left .youhui a, .nav .container .right .fenlei a, .nav .container .right .youhui a {
+  width: 200px;
+}
+
+.nav .container .right {
+  float: right;
+}
+
+.xq .del .shop_msg, .xq .picture .shop_msg {
+  float: left;
+  width: 269px;
+  border-left: 1px solid #eee;
+  height: 510px;
+}
+
+.xq .del .shop_msg h6, .xq .picture .shop_msg h6 {
+  height: 30px;
+  padding-left: 20px;
+  padding-top: 30px;
+  font-size: 18px;
+  color: #333333;
+}
+
+.xq .del .shop_msg .shopLogo, .xq .picture .shop_msg .shopLogo {
+  height: 60px;
+  padding: 20px 40px;
+}
+
+.xq .del .shop_msg .shopLogo img, .xq .picture .shop_msg .shopLogo img {
+  width: 100%;
+  height: 100%;
+}
+
+.xq .del .shop_msg p, .xq .picture .shop_msg p {
+  height: 29px;
+  font-size: 14px;
+  line-height: 30px;
+  padding-left: 20px;
+  border-bottom: 1px  dashed #ccc;
+}
+
+.xq .del .shop_msg p span, .xq .picture .shop_msg p span {
+  color: #37A0DB;
+}
+
+.xq .del .shop_msg .pingjia, .xq .picture .shop_msg .pingjia {
+  height: 140px;
+  padding-top: 10px;
+  padding-left: 20px;
+}
+
+.xq .del .shop_msg .pingjia > li span, .xq .picture .shop_msg .pingjia > li span {
+  display: block;
+  width: 60px;
+  font-size: 12px;
+  color: #666666;
+  line-height: 30px;
+  float: left;
+}
+
+.xq .del .shop_msg .pingjia > li > ul, .xq .picture .shop_msg .pingjia > li > ul {
+  height: 30px;
+}
+
+.xq .del .shop_msg .pingjia > li > ul li, .xq .picture .shop_msg .pingjia > li > ul li {
+  float: left;
+  color: #F6AB00;
+  line-height: 29px;
+}
+
+.xq .del .shop_msg .pingjia > li button, .xq .picture .shop_msg .pingjia > li button {
+  padding: 0 10px;
+  line-height: 30px;
+  color: #fff;
+  font-size: 14px;
+  border: none;
+  margin-left: 10px;
+}
+
+.xq .del .shop_msg .pingjia > li .coming_shop, .xq .picture .shop_msg .pingjia > li .coming_shop {
+  background-color: #37A0DB;
+}
+
+.xq .del .shop_msg .pingjia > li .on_line, .xq .picture .shop_msg .pingjia > li .on_line {
+  background-color: #F6AB00;
+  margin-top: 10px;
+}
+
+.xq .del .shop_msg .label, .xq .picture .shop_msg .label {
+  border-top: 1px solid #ccc;
+}
+
+.xq .del .shop_msg .label > li, .xq .picture .shop_msg .label > li {
+  float: left;
+  height: 25px;
+  padding: 0 5px;
+  line-height: 25px;
+  color: #666666;
+  font-size: 12px;
+  margin-top: 8px;
+  margin-left: 12px;
+  border: 1px solid #ccc;
+}
+
+.xq {
+  background-color: #FBFBFB;
+}
+
+.xq > h5 {
+  height: 40px;
+  line-height: 40px;
+  padding-left: 30px;
+  font-size: 12px;
+  border-bottom: 1px solid #ccc;
+}
+
+.xq .del {
+  background-color: #fff;
+  height: 510px;
+}
+
+.xq .del .detailImg {
+  width: 400px;
+  float: left;
+}
+
+.xq .del .detailImg .bigImg {
+  padding: 15px;
+  width: 370px;
+  height: 370px;
+}
+
+.xq .del .detailImg .bigImg img {
+  width: 100%;
+  height: 100%;
+}
+
+.xq .del .detailImg .smallImg {
+  height: 62px;
+  margin-left: 40px;
+}
+
+.xq .del .detailImg .smallImg li {
+  width: 60px;
+  height: 60px;
+  float: left;
+  margin-right: 7px;
+}
+
+.xq .del .detailImg .smallImg li img {
+  width: 100%;
+  height: 100%;
+}
+
+.xq .del .detailImg .other {
+  height: 37px;
+}
+
+.xq .del .detailImg .other span {
+  display: block;
+}
+
+.xq .del .detailImg .other .prd_id {
+  float: left;
+  font-size: 12px;
+  color: #666;
+}
+
+.xq .del .detailImg .other .tubiao {
+  float: right;
+}
+
+.xq .del .detailImg .other .tubiao i {
+  display: block;
+  width: 25px;
+  height: 25px;
+  float: left;
+}
+
+.xq .del .detailImg .other .tubiao i:first-child {
+  background: url("../img/sprite.fw.png") -470px -180px no-repeat;
+}
+
+.xq .del .detailImg .other .tubiao i:nth-child(2) {
+  background: url("../img/sprite.fw.png") -500px -180px no-repeat;
+}
+
+.xq .del .detailImg .other .tubiao i:last-child {
+  background: url("../img/sprite.fw.png") -540px -180px no-repeat;
+}
+
+.xq .del .detail {
+  float: left;
+  width: 529px;
+  border-left: 1px solid #eee;
+}
+
+.xq .del .detail h3 {
+  padding-left: 10px;
+  height: 40px;
+  line-height: 40px;
+  color: #37A0DB;
+}
+
+.xq .del .detail .cost {
+  padding-left: 10px;
+  height: 112px;
+  background-color: #F7F7F7;
+}
+
+.xq .del .detail .cost h4 {
+  height: 35px;
+  color: #0068BC;
+  font-size: 14px;
+  padding-top: 5px;
+}
+
+.xq .del .detail .cost h4 span {
+  color: #CC0000;
+  font-size: 24px;
+}
+
+.xq .del .detail .cost .cankao {
+  display: block;
+  height: 30px;
+  font-size: 12px;
+  color: #333333;
+  line-height: 30px;
+}
+
+.xq .del .detail .cost .enj {
+  display: block;
+  height: 30px;
+  font-size: 14px;
+  color: #FF0000;
+  line-height: 30px;
+}
+
+.xq .del .detail .prod_size li {
+  height: 30px;
+  line-height: 30px;
+}
+
+.xq .del .detail .prod_size li span {
+  display: block;
+  width: 70px;
+  float: left;
+  font-size: 14px;
+  text-align: center;
+  font-size: 14;
+}
+
+.xq .del .detail .prod_size li .xing {
+  height: 30px;
+}
+
+.xq .del .detail .prod_size li .xing li {
+  float: left;
+  color: #F6AB00;
+}
+
+.xq .del .detail .prod_size li .server {
+  float: left;
+  font-size: 12px;
+}
+
+.xq .del .detail .prod_size li #region {
+  float: left;
+  width: 88px;
+  height: 27px;
+}
+
+.xq .del .detail .prod_size li .count {
+  float: left;
+  padding-top: 10px;
+  width: 105px;
+  height: 20px;
+}
+
+.xq .del .detail .prod_size li .count button {
+  background-color: #F9F9F9;
+  float: left;
+  border: none;
+  width: 26px;
+  height: 26px;
+  border: 1px solid #ccc;
+}
+
+.xq .del .detail .prod_size li .count input {
+  width: 30px;
+  border: 1px solid #ccc;
+  float: left;
+  height: 24px;
+  padding-left: 20px;
+}
+
+.xq .del .detail .prod_size > li:nth-child(4), .xq .del .detail .prod_size > li:nth-child(5) {
+  height: 37px;
+  padding-top: 15px;
+}
+
+.xq .del .detail .prod_size > li:nth-child(4) .color li, .xq .del .detail .prod_size > li:nth-child(4) .size li, .xq .del .detail .prod_size > li:nth-child(5) .color li, .xq .del .detail .prod_size > li:nth-child(5) .size li {
+  float: left;
+  padding: 0 6px;
+  border: 1px solid #E1E1E1;
+  font-size: 12px;
+  margin: 4px 5px 0 0;
+}
+
+.xq .del .detail .prod_size > li:last-child {
+  height: 30px;
+  margin-top: 20px;
+}
+
+.xq .del .detail .prod_size > li:last-child button {
+  padding: 0 10px;
+  line-height: 30px;
+  color: #fff;
+  font-size: 14px;
+  border: none;
+}
+
+.xq .del .detail .prod_size > li:last-child .buy {
+  background-color: #F6AB00;
+  margin-left: 20px;
+}
+
+.xq .del .detail .prod_size > li:last-child .add_car {
+  background-color: #37A0DB;
+}
+
+.xq .del .detail .prod_size > li:last-child .atten {
+  background-color: #fff;
+  color: #333;
+  border: 1px solid #ccc;
+  padding: 0 20px;
+}
+
+.xq .picture {
+  padding-left: 18px;
+  margin-top: 18px;
+  background-color: #fff;
+}
+
+.xq .picture .pic_left {
+  float: left;
+  width: 902px;
+}
+
+.xq .picture .pic_left .spec {
+  height: 44px;
+  border-bottom: 1px solid #eee;
+}
+
+.xq .picture .pic_left .spec li {
+  float: left;
+  padding-left: 53px;
+  width: 90px;
+  position: relative;
+}
+
+.xq .picture .pic_left .spec li a {
+  color: #333;
+  display: block;
+  width: 90px;
+  line-height: 44px;
+  font-size: 16px;
+}
+
+.xq .picture .pic_left .spec li i {
+  position: absolute;
+  left: 30px;
+  top: 13px;
+  font-size: 20px;
+  color: #333;
+}
+
+.xq .picture .pic_left > h5 {
+  width: 900px;
+  height: 80px;
+  background: url("../img/sprite.fw.png") 0 -220px no-repeat;
+}
+
+.xq .picture .pic_left .guige li {
+  height: 35px;
+}
+
+.xq .picture .pic_left .guige li span {
+  display: block;
+  float: left;
+}
+
+.xq .picture .pic_left .guige li span:first-child {
+  width: 85px;
+  font-size: 16px;
+  color: #333;
+  height: 35px;
+  line-height: 35px;
+}
+
+.xq .picture .pic_left .guige li span:last-child {
+  width: 815px;
+  font-size: 14px;
+  margin: 9px 0;
+}
+
+.xq .picture .pic_left > p {
+  width: 900px;
+  height: 80px;
+  background: url("../img/sprite.fw.png") 0 -320px no-repeat;
+}
+
+.xq .picture .pic_left .de_ptr {
+  width: 880px;
+}
+
+.xq .picture .shop_msg h6 {
+  border-bottom: 1px solid #eee;
+}
+
+.xq .picture .shop_msg .prom {
+  width: 268px;
+  height: 180px;
+  background: url("../img/sprite.fw.png") -920px -200px no-repeat;
+}
