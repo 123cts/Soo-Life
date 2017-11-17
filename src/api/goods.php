@@ -7,8 +7,13 @@
 
     $qty = isset($_GET['qty']) ? $_GET['qty'] : 20;//10
 
+    $id = isset($_GET['id']) ? $_GET['id'] : null;
     // 编写sql语句
     $sql = "select * from goods";
+
+    if($id){
+        $sql .= " where id='$id'";
+    }
 
     // 执行sql语句
     // query()

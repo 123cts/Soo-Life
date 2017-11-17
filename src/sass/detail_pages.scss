@@ -72,167 +72,171 @@
 // 商品详情
 .xq{
     background-color:#FBFBFB;
-    >h5{
-        height: 40px;line-height: 40px;padding-left:30px;font-size:12px;
-        border-bottom:1px solid #ccc;
-    }
-    .del{
-        background-color:#fff;
-        height: 510px;
-        .detailImg{
-            width: 400px;float:left;
-            .bigImg{
-                padding:15px;width: 370px;height: 370px;
-                img{width: 100%;height:100%;}
-            }
-            .smallImg{
-                height: 62px;margin-left:40px;
-                li{
-                    width: 60px;height: 60px;float:left;margin-right:7px;
-                    img{width: 100%;height: 100%;}
-                }
-            }
-            .other{
-                height: 37px;
-                span{display:block;}
-                .prd_id{float:left;font-size:12px;color:#666;}
-                .tubiao{
-                    float:right;
-                    i{display:block;width: 25px;height: 25px;float:left;}
-                    i:first-child{
-                        background:url('../img/sprite.fw.png') -470px -180px no-repeat;
-                    }
-                    i:nth-child(2){
-                        background:url('../img/sprite.fw.png') -500px -180px no-repeat;
-                    }
-                    i:last-child{
-                        background:url('../img/sprite.fw.png') -540px -180px no-repeat;
-                    }
-                }
-            }
+    .container{
+        .daohang{
+            height: 40px;line-height: 40px;padding-left:30px;font-size:12px;
+            border-bottom:1px solid #ccc;
         }
-   
-        .detail{
-            float:left;width: 529px;border-left:1px solid #eee;
-            h3{
-                padding-left:10px;
-                height: 40px;line-height: 40px;color:#37A0DB;
-            }
-            .cost{
-                padding-left:10px;
-                height: 112px;background-color:#F7F7F7;
-                h4{height: 35px;
-                    color:#0068BC;font-size:14px;
-                    padding-top:5px;
-                    span{
-                        color:#CC0000;
-                        font-size:24px;
+        .del{
+            background-color:#fff;
+            height: 510px;
+            .detailImg{
+                width: 400px;float:left;
+                .bigImg{
+                    padding:15px;width: 370px;height: 370px;
+                    img{width: 100%;height:100%;}
+                }
+                .smallImg{
+                    height: 62px;margin-left:40px;
+                    li{
+                        width: 60px;height: 60px;float:left;margin-right:7px;
+                        img{width: 100%;height: 100%;}
                     }
                 }
-                .cankao{
-                    display:block;
-                    height: 30px;font-size:12px;color:#333333;line-height: 30px;
-                }
-                .enj{display:block;
-                    height: 30px;font-size:14px;color:#FF0000;line-height: 30px
-
-                }
-            }
-            .prod_size{
-                li{
-                    height: 30px;line-height: 30px;
-                    span{display:block;width: 70px;float:left;font-size:14px;text-align:center;font-size:14}
-                    .xing{
-                        height: 30px;
-                        // width: 460px;
-                        li{float:left;color:#F6AB00;}
-                    }
-                    .server{float:left;font-size:12px;}
-
-                    #region{float:left;width: 88px;height: 27px;}
-                    .count{
-                        float:left;padding-top:10px;
-                        width: 105px;height: 20px;
-                        button{background-color:#F9F9F9;float:left;border:none;width: 26px;height: 26px;border:1px solid #ccc;}
-                        input{width: 30px;border:1px solid #ccc;float:left;height: 24px;padding-left:20px;}
-                    }
-                }
-                >li:nth-child(4), >li:nth-child(5){
-                    height: 37px;padding-top:15px;
-                     .color,.size{
-                        li{
-                            float:left;padding:0 6px;border:1px solid #E1E1E1;font-size:12px;
-                            margin:4px 5px 0 0;
+                .other{
+                    height: 30px;padding-left:20px;
+                    padding-top:7px;
+                    span{display:block;}
+                    .prd_id{float:left;font-size:12px;color:#666;}
+                    .tubiao{
+                        float:right;
+                        i{display:block;width: 25px;height: 25px;float:left;}
+                        i:first-child{
+                            background:url('../img/sprite.fw.png') -470px -180px no-repeat;
+                        }
+                        i:nth-child(2){
+                            background:url('../img/sprite.fw.png') -500px -180px no-repeat;
+                        }
+                        i:last-child{
+                            background:url('../img/sprite.fw.png') -540px -180px no-repeat;
                         }
                     }
                 }
+            }
+       
+            .detail{
+                float:left;width: 529px;border-left:1px solid #eee;
+                h3{
+                    padding-left:10px;
+                    height: 40px;line-height: 40px;color:#37A0DB;
+                }
+                .cost{
+                    padding-left:10px;
+                    height: 112px;background-color:#F7F7F7;
+                    h4{height: 35px;
+                        color:#0068BC;font-size:14px;
+                        padding-top:5px;
+                        span{
+                            color:#CC0000;
+                            font-size:24px;
+                        }
+                    }
+                    .cankao{
+                        display:block;
+                        height: 30px;font-size:12px;color:#333333;line-height: 30px;
+                    }
+                    span{height: 30px;font-size:14px;line-height: 30px}
+                    .enj{display:block;float:left;
+                        color:#FF0000;
+                    }
+                    .mianyf{display:block;float:left;}
+                }
+                .prod_size{
+                    li{
+                        height: 30px;line-height: 30px;
+                        span{display:block;width: 70px;float:left;font-size:14px;text-align:center;font-size:14}
+                        .xing{
+                            height: 30px;
+                            // width: 460px;
+                            li{float:left;color:#F6AB00;}
+                        }
+                        .server{float:left;font-size:12px;}
 
-                >li:last-child{
-                    height: 30px;margin-top:20px;
-                    button{
-                        padding:0 10px;line-height: 30px;color:#fff;font-size:14px;
-                        border:none;
+                        #region{float:left;width: 88px;height: 27px;}
+                        .count{
+                            float:left;padding-top:10px;
+                            width: 105px;height: 20px;
+                            button{background-color:#F9F9F9;float:left;border:none;width: 26px;height: 26px;border:1px solid #ccc;}
+                            .total{width: 50px;border:1px solid #ccc;float:left;height: 24px;text-align:center}
+                        }
                     }
-                    .buy{
-                        background-color:#F6AB00;margin-left:20px;
-                    }
-                    .add_car{
-                        background-color:#37A0DB;
-                    }
-                    .atten{
-                        background-color:#fff;color:#333;
-                        border:1px solid #ccc;padding:0 20px;
+                    >li:nth-child(4), >li:nth-child(5){
+                        height: 37px;padding-top:15px;
+                         .color,.size{
+                            li{
+                                float:left;padding:0 6px;border:1px solid #E1E1E1;font-size:12px;
+                                margin:4px 5px 0 0;
+                            }
+                        }
                     }
 
+                    >li:last-child{
+                        height: 30px;margin-top:20px;
+                        button{
+                            padding:0 10px;line-height: 30px;color:#fff;font-size:14px;
+                            border:none;
+                        }
+                        .buy{
+                            background-color:#F6AB00;margin-left:20px;
+                        }
+                        .add_car{
+                            background-color:#37A0DB;
+                        }
+                        .atten{
+                            background-color:#fff;color:#333;
+                            border:1px solid #ccc;padding:0 20px;
+                        }
+
+                    }
                 }
             }
-        }
-        .shop_msg{
-             @extend %shop_msg;
-        }
-    } 
-    .picture{
-        padding-left:18px;margin-top:18px;background-color:#fff;
-        .pic_left{
-            float:left;
-            width: 902px;
-            .spec{ 
-                height: 44px;border-bottom:1px solid #eee;
-                li{
-                   float:left;padding-left:53px;width: 90px;position:relative;
-                    a{color:#333;
-                        display:block;width: 90px;line-height: 44px;font-size:16px;
-                    }
-                    i{position:absolute;left:30px;top:13px;font-size:20px;color:#333;}
-                }
+            .shop_msg{
+                 @extend %shop_msg;
             }
-            >h5{width: 900px;height: 80px;background:url('../img/sprite.fw.png') 0 -220px no-repeat;}
-            .guige{
+        } 
+        .picture{
+            padding-left:18px;margin-top:18px;background-color:#fff;
+            .pic_left{
+                float:left;
+                width: 902px;
+                .spec{ 
+                    height: 44px;border-bottom:1px solid #eee;
+                    li{
+                       float:left;padding-left:53px;width: 90px;position:relative;
+                        a{color:#333;
+                            display:block;width: 90px;line-height: 44px;font-size:16px;
+                        }
+                        i{position:absolute;left:30px;top:13px;font-size:20px;color:#333;}
+                    }
+                }
+                >h5{width: 900px;height: 80px;background:url('../img/sprite.fw.png') 0 -220px no-repeat;}
+                .guige{
 
-                li{ height: 35px;
-                    span{display:block;float:left;}
-                    span:first-child{width: 85px;font-size:16px;color:#333;height: 35px;line-height: 35px;}
-                    span:last-child{width: 815px;
-                        font-size:14px;margin:9px 0 ;
+                    li{ height: 35px;
+                        span{display:block;float:left;}
+                        span:first-child{width: 85px;font-size:16px;color:#333;height: 35px;line-height: 35px;}
+                        span:last-child{width: 815px;
+                            font-size:14px;margin:9px 0 ;
+                        }
                     }
                 }
+                >p{
+                    width: 900px;height: 80px;background:url('../img/sprite.fw.png') 0 -320px no-repeat;
+                }
+                .de_ptr{
+                    width: 880px;
+                }
             }
-            >p{
-                width: 900px;height: 80px;background:url('../img/sprite.fw.png') 0 -320px no-repeat;
+            .shop_msg{
+                h6{
+                    border-bottom:1px solid #eee;
+                }
+                .prom{
+                    width: 268px;height: 180px;
+                    background:url('../img/sprite.fw.png') -920px -200px no-repeat;
+                }
+                @extend %shop_msg;
             }
-            .de_ptr{
-                width: 880px;
-            }
-        }
-        .shop_msg{
-            h6{
-                border-bottom:1px solid #eee;
-            }
-            .prom{
-                width: 268px;height: 180px;
-                background:url('../img/sprite.fw.png') -920px -200px no-repeat;
-            }
-            @extend %shop_msg;
         }
     }
 }

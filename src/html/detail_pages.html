@@ -33,28 +33,30 @@
         </div> 
         <div class="xq clearfix">
             <div class="container">
-                <h5>如此生活</h5>
+                <h5 class="daohang">如此生活</h5>
                 <div class="del">
                     <div class="detailImg">
                         <div class="bigImg">
-                            <img src="../img/goods_img/a1.jpg" />
+                            <img/>
                         </div>
                         <ul class="smallImg">
-                            <li><img src="../img/goods_img/a1.jpg"/></li>
+                          <!--   <li><img src="../img/goods_img/a1.jpg"/></li>
                             <li><img src="../img/goods_img/a2.jpg"/></li>
-                            <li><img src="../img/goods_img/a3.jpg"/></li>
+                            <li><img src="../img/goods_img/a3.jpg"/></li> -->
                         </ul>
-                        <div class="other"><span class="prd_id">商品编号</span><span class="tubiao"><i></i><i></i><i></i></span></div>
+                        <div class="other"><span class="prd_id"></span><span class="tubiao"><i></i><i></i><i></i></span></div>
                     </div>
                     <div class="detail">
                         <!-- 商品名字 -->
                         <h3>时雨一方针织衫S17AW017</h3>
                         <div class="cost">
-                            <h4><span>￥341.00</span>如此生活价</h4>
-                            <span class="cankao">(参考价￥569.00)</span>
-                            <span class="enj">享受的活动:[满额包邮]满128元免运费</span><p><span></span></p>
+                            <h4><!-- <span>￥341.00</span>如此生活价 --></h4>
+                            <span class="cankao"><!-- (参考价￥569.00) --></span>
+                            <span class="enj">享受的活动:[满额包邮]</span><span class="mianyf">满128元免运费</span>
                         </div>
+                        <!-- 商品规格 -->
                         <ul class="prod_size">
+                            <!-- 评价 -->
                             <li class="eval">
                                 <span>评价</span>
                                 <ul class="xing">
@@ -65,34 +67,37 @@
                                     <li><i class="iconfont icon-xing"></i></li>
                                 </ul>
                             </li>
+                            <!-- 服务 -->
                             <li >
                                 <span>服务</span>
                                 <p class="server">由"Shiyu品牌旗舰店"直接销售和发货，并提供售后服务</p>
                             </li>
+                            <!-- 地址 -->
                             <li class="send">
                                 <span>送至</span>
                                 <select name="region" id="region"></select>
                             </li>
+                            <!-- 颜色 -->
                             <li >
                                 <span>颜色</span>
                                 <ul class="color">
-                                    <li>红色</li>
-                                    <li>藏青</li>
+                                   <!--  <li>红色</li>
+                                    <li>藏青</li> -->
                                 </ul>
                             </li>  
                             <li>
                                 <span>尺码</span>
                                 <ul class="size">
-                                    <li>L</li>
+                                   <!--  <li>L</li>
                                     <li>M</li>
-                                    <li>S</li>
+                                    <li>S</li> -->
                                 </ul>
                             </li>
                             <li>
                                <span>数量</span>
                                <div class="count">
                                    <button>-</button>
-                                   <input type="text" />
+                                   <span class="total"></span>
                                    <button>+</button>
                                </div>
                             </li>
@@ -106,9 +111,9 @@
                     <div class="shop_msg clearfix">
                         <h6>店铺信息</h6>
                         <div class="shopLogo">
-                            <img src="../img/brand_icon/5.png"/>
+                            <img/>
                         </div>
-                        <p>卖家：<span>Shiyu品牌旗舰店</span></p>
+                        <p>卖家：<span class="dianpu"></span></p>
                         <ul class="pingjia">
                             <li>
                                 <span>商品包装：</span>
@@ -165,10 +170,10 @@
                         </ul>
                         <h5></h5>
                         <ul class="guige clearfix">
-                            <li><span>商品名称：</span><span>时语一方针织衫S17AW017</span></li>
+                            <li><span>商品名称：</span><span class="ship_name"></span></li>
                             <li><span>品牌：   </span><span>时语一方(shiyu)</span></li>
-                            <li><span>颜色：   </span><span>藏青   黑色  </span></li>
-                            <li><span>尺码：    </span><span>L   M   S </span></li>
+                            <li><span>颜色：   </span><span class="color"></span></li>
+                            <li><span>尺码：    </span><span id="size"></span></li>
                             <li><span>
                             特别说明：</span><span>因厂家会在没有任何提前通知的情况下更改产品包装、产地或者一些附件， 本司不能确保客户收到的货物与商城图片、产地、附件说明完全一致。网站商 品的功能参数仅供参考，请以实物为准，我司只能确保网站经营商品均为原厂 正品行货！并且保证与当时市场上同样主流新品一致。若本商城没有及时更新， 请大家谅解！</span></li>
                             <li><span>
@@ -177,16 +182,18 @@
                             <li><span>权利声明： </span><span>如此生活上的所有商品信息、客户评价、商品咨询、网友讨论等内容， 是如此生活重要的经营资源，未经许可，禁止非法转载使用。注：本站商 品信息均来自于合作方，其真实性、准确性和合法性由信息拥有者（合作 方）负责。本站不提供任何保证，并不承担任何法律责任</span></li>
                         </ul>
                         <p></p>
-                        <div class="de_ptr"><img src="../img/goods_img/b.png" /></div>
+                        <div class="de_ptr" id="Detail_img"><img/></div>
+                        <div class="de_ptr"><img src="../img/goods_img/xuzhi.png" /></div>
+                        <div class="de_ptr"><img src="../img/goods_img/koubei.png" /></div>
                     </div>
                     <div class="shop_msg clearfix">
                         <h6>店铺承诺</h6>
                         <div class="prom"></div>
                         <h6>店铺信息</h6>
                         <div class="shopLogo">
-                            <img src="../img/brand_icon/5.png"/>
+                            <img/>
                         </div>
-                        <p>卖家：<span>Shiyu品牌旗舰店</span></p>
+                        <p>卖家：<span class="dianpu"></span></p>
                         <ul class="pingjia">
                             <li>
                                 <span>商品包装：</span>
