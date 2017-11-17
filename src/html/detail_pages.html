@@ -7,6 +7,7 @@
     <link rel="stylesheet" type="text/css" href="../css/header.css" />
     <link rel="stylesheet" type="text/css" href="../css/detail_pages.css" />
     <link rel="stylesheet" type="text/css" href="../css/footer.css" />
+    <link rel="stylesheet" type="text/css" href="../lib/jquery.Zoom/jquery.Zoom.css" />
 </head>
 <body>
      <div class="min_width">
@@ -33,18 +34,25 @@
         </div> 
         <div class="xq clearfix">
             <div class="container">
-                <h5 class="daohang">如此生活</h5>
+                <h5 class="daohang"></h5>
                 <div class="del">
                     <div class="detailImg">
                         <div class="bigImg">
                             <img/>
                         </div>
+                        <i class="iconfont icon-jiantou-left" id="pre"></i>
                         <ul class="smallImg">
                           <!--   <li><img src="../img/goods_img/a1.jpg"/></li>
                             <li><img src="../img/goods_img/a2.jpg"/></li>
                             <li><img src="../img/goods_img/a3.jpg"/></li> -->
                         </ul>
-                        <div class="other"><span class="prd_id"></span><span class="tubiao"><i></i><i></i><i></i></span></div>
+                        <i class="iconfont icon-jiantou-copy" id="next"></i>
+                        <div class="other">
+                            <span class="prd_id"></span>
+                                <span class="tubiao">
+                                <i></i><i></i><i></i>
+                            </span>
+                        </div>
                     </div>
                     <div class="detail">
                         <!-- 商品名字 -->
@@ -96,9 +104,9 @@
                             <li>
                                <span>数量</span>
                                <div class="count">
-                                   <button>-</button>
+                                   <button class="sub">-</button>
                                    <span class="total"></span>
-                                   <button>+</button>
+                                   <button class="add">+</button>
                                </div>
                             </li>
                             <li class="btn">
@@ -236,9 +244,23 @@
         </div>
         <div class="footer"></div>
         <div class="psn_bar"></div>
+        <div class="buyCar">
+            <h3>购物车<i class="closeCar"></i></h3>
+            <div class="car">
+                <ul>
+                    <!-- <li><i class="close"></i>
+                        <img src="../img/goods_img/a1.jpg"/>
+                        <p class="prd_name">时语一方。。。。</p>
+                        <p>数量为<span class="count">1</span>件</p>
+                        <span class="prd_price">￥341</span>
+                    </li> -->
+                </ul>
+            </div>
+        </div>
     </div>
-
      <script src="../js/jquery-3.2.1.js"></script>
+     <script src="../lib/jquery.Zoom/jquery.Zoom.js"></script>
      <script src="../js/detail_pages.js"></script>
+
 </body>
 </html>

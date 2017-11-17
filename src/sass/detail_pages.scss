@@ -79,19 +79,26 @@
         }
         .del{
             background-color:#fff;
-            height: 510px;
+            height: 490px;padding:15px;position:relative;
             .detailImg{
-                width: 400px;float:left;
+                width: 385px;float:left;
                 .bigImg{
-                    padding:15px;width: 370px;height: 370px;
-                    img{width: 100%;height:100%;}
+                    width: 370px;height: 370px;
+                    img{width: 370px;height:370px;}
                 }
+                >i{display:block;position:absolute;font-size:30px;color:#F6AB57;height: 30px;width: 30px;bottom:66px;}
+                .icon-jiantou-left{left:-2px;}
+                .icon-jiantou-copy{left:360px;}
                 .smallImg{
-                    height: 62px;margin-left:40px;
+                    height: 62px;margin-left:20px;margin-top:20px;
                     li{
-                        width: 60px;height: 60px;float:left;margin-right:7px;
+                        width: 60px;height: 60px;float:left;margin-right:7px;border:2px solid #eee;
                         img{width: 100%;height: 100%;}
                     }
+                    // li:first-child{
+                    //     border:2px solid #F6AB57
+                    // }
+                    .atv{border:2px solid #F6AB57}
                 }
                 .other{
                     height: 30px;padding-left:20px;
@@ -115,7 +122,7 @@
             }
        
             .detail{
-                float:left;width: 529px;border-left:1px solid #eee;
+                float:left;width: 510px;border-left:1px solid #eee;
                 h3{
                     padding-left:10px;
                     height: 40px;line-height: 40px;color:#37A0DB;
@@ -238,5 +245,37 @@
                 @extend %shop_msg;
             }
         }
+    }
+}
+
+.buyCar{
+    width: 320px;height: 100%;position:fixed;right:35px;top:0;background-color:#fff;box-shadow: -2px 0px 4px rgba(55, 55, 55, 0.4);padding:15px;
+    h3{
+        height: 30px;margin-top:70px;font-size:18px;color:#333;position:relative;border-bottom:1px solid #eee;
+        i{display:block;width: 45px;height: 45px;background:url('../img/sprite.fw.png') 0 -420px no-repeat;position:absolute;right:-14px;top:-87px;
+        }
+    }
+    .car
+    {
+        ul{
+            li{
+            height: 80px;padding:5px 0;padding-left:15px;position:relative;
+            margin-top:10px;box-shadow: -1px -1px 3px rgba(55, 55, 55, 0.4),1px 1px 3px rgba(55, 55, 55, 0.4);
+            img{display:block;width: 55px;height: 80px;float:left;}
+            p{  float:left;
+                margin-left:23px;font-size:12px;color:666;width: 200px;height: 22px;line-height: 22px;
+            }
+            .prd_price{
+                font-size:20px;color:#393939;margin-left:22px;
+            }
+            .close{
+                display:block;width: 15px;height: 22px;position:absolute;right:5px;top:0;background:url('../img/sprite.fw.png') -70px -430px no-repeat;
+            }
+            .close :hover{
+                background-color:#000;
+            }
+        }
+        }
+        
     }
 }

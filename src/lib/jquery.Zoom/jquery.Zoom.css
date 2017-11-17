@@ -1,0 +1,4 @@
+.gds-zoom{position:relative;}
+.gds-zoom .minzoom{position: absolute;width:60px;height:60px;border:1px solid #fc0;background-color:#ff0;background-color: rgba(255,255,0,.3);filter:alpha(Opacity=30);}
+.gds-big{position: absolute;width:200px;height:300px;overflow:hidden;left:400px;}
+.gds-big img{position: absolute;left:0;right:0;}
