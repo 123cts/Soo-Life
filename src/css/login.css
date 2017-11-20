@@ -99,3 +99,43 @@
   position: absolute;
   right: 10px;
 }
+
+.login_pannel .container .login form .zc {
+  height: 30px;
+}
+
+.login_pannel .container .login form .zc span {
+  display: block;
+  float: right;
+  font-size: 10px;
+  line-height: 30px;
+}
+
+.login_pannel .container .login form .outher {
+  height: 30px;
+  line-height: 30px;
+}
+
+.login_pannel .container .login form .outher span {
+  font-size: 14px;
+  display: block;
+}
+
+.login_pannel .container .login form .outher a {
+  position: relative;
+  color: #333;
+  display: block;
+  font-size: 12px;
+  width: 50px;
+  float: left;
+  text-align: center;
+}
+
+.login_pannel .container .login form .l_alert {
+  display: block;
+  height: 20px;
+  font-size: 10px;
+  line-height: 20px;
+  position: absolute;
+  color: #f00;
+}

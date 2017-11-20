@@ -1,64 +1,66 @@
-(function($){
+require(['config'],function(){
+    // 加载common.js
+    require(['common','jquery','Zoom','detail_pages'],function(){
         // 加载头部
-    $('.header').load("../html/header.html #header",function(){
-        // 头部移入效果
-        // 创建节点
-        var $li = $('.weixin').closest('li');
-        $('<div/>').addClass('erweima wx').appendTo($li);
-         $('<div/>').addClass('erweima wb').appendTo($li);
-         // 微信移入移除效果
-        $('.weixin').on('mouseover',function(){
-            $('.wx').show();
-        }).on('mouseout',function(){
-            $('.wx').hide();
-        });
-        // 微博移入移除效果
-        $('.weibo').on('mouseover',function(){
-            $('.wb').show();
-        }).on('mouseout',function(){
-            $('.wb').hide();
-        });
+        $('.header').load("../html/header.html #header",function(){
+            // 头部移入效果
+            // 创建节点
+            var $li = $('.weixin').closest('li');
+            $('<div/>').addClass('erweima wx').appendTo($li);
+             $('<div/>').addClass('erweima wb').appendTo($li);
+             // 微信移入移除效果
+            $('.weixin').on('mouseover',function(){
+                $('.wx').show();
+            }).on('mouseout',function(){
+                $('.wx').hide();
+            });
+            // 微博移入移除效果
+            $('.weibo').on('mouseover',function(){
+                $('.wb').show();
+            }).on('mouseout',function(){
+                $('.wb').hide();
+            });
 
-        // 头部右边
-        $('#header_right').on("mouseover",'li',function(){
-            var $show = $(this).find('.box')
-            $show.css( {'width':'90px'})
-            $show.css("display","block");
-            $(this).siblings('li').find('.box').css("display","none"); 
-        }).on('mouseout','li',function(){
-             var $show = $(this).find('.box')
-             $show.css("display","none");
+            // 头部右边
+            $('#header_right').on("mouseover",'li',function(){
+                var $show = $(this).find('.box')
+                $show.css( {'width':'90px'})
+                $show.css("display","block");
+                $(this).siblings('li').find('.box').css("display","none"); 
+            }).on('mouseout','li',function(){
+                 var $show = $(this).find('.box')
+                 $show.css("display","none");
+            });
+        });
+        $('.search').load("../html/header.html #search",function(){
+            $('.search_c').find('ul').remove();
+            $('.search_r').html('').css('background',"url('../img/sprite.fw.png') -300px -175px no-repeat")
         })
-    });
-    $('.search').load("../html/header.html #search",function(){
-        $('.search_c').find('ul').remove();
-        $('.search_r').html('').css('background',"url('../img/sprite.fw.png') -300px -175px no-repeat")
-    })
-    $(".footer").load("../html/footer.html #footer");
-    $(".psn_bar").load("../html/header.html #psn_bar",function(){
-        // 右导航栏实现的动画
-        $('.favicon').on('mouseover',function(){
-            $(this).find('.fa_login').show();
-        }).on('mouseout',function(){
-            $(this).find('.fa_login').hide();
-        });
-        $('.icon').on('mouseenter','a',function(){
-            $(this).next('span').stop().animate({right:35,opacity:1})
-        }).on('mouseleave','a',function(){
-             $(this).next('span').stop().animate({right:80,opacity:0});
-        });
-        // 获取滚动高度
-        var to_top = document.querySelector('.to_top');
-         window.onscroll = function(){
-                var scrollTop = window.scrollY;
+        $(".footer").load("../html/footer.html #footer");
+        $(".psn_bar").load("../html/header.html #psn_bar",function(){
+            // 右导航栏实现的动画
+            $('.favicon').on('mouseover',function(){
+                $(this).find('.fa_login').show();
+            }).on('mouseout',function(){
+                $(this).find('.fa_login').hide();
+            });
+            $('.icon').on('mouseenter','a',function(){
+                $(this).next('span').stop().animate({right:35,opacity:1})
+            }).on('mouseleave','a',function(){
+                 $(this).next('span').stop().animate({right:80,opacity:0});
+            });
+            // 获取滚动高度
+            var to_top = document.querySelector('.to_top');
+             window.onscroll = function(){
+                    var scrollTop = window.scrollY;
 
-                if(scrollY > 500){
-                    to_top.style.display = 'block';
-                }else{
-                    to_top.style.display = 'none';
-                }
+                    if(scrollY > 500){
+                        to_top.style.display = 'block';
+                    }else{
+                        to_top.style.display = 'none';
+                    }
 
-        }
+            }
 
             // 点击楼梯去到相对应的商品位置
             $('#stairs ul li').click(function(e) {
@@ -85,13 +87,12 @@
                     scrollTo(0,btn_to_top);
                 }, 20);
             }
-        $('.cart').on('click',function(){
-            $('.buyCar').css({
-                display: 'block'
-        });
-    })
-
-     });
+            $('.cart').on('click',function(){
+                $('.buyCar').css({
+                    display: 'block'
+            });
+        })
+  
 
     // 获取传递过来的参数
     // 截取url里的id值
@@ -147,10 +148,15 @@
 
             // 颜色
             var color= JSON.parse(res.data[0].color);
+            ;
             var Color = color.map(function(item){
+                // item[0].addClass('Atv')
+                console.log(item)
                 return `<li>${item}</li>`;
             });
             $('.color').html(Color);
+
+            $('.color').find('li').eq(0).addClass('Atv')
 
             // 大小
             var size= JSON.parse(res.data[0].size);
@@ -160,6 +166,9 @@
 
             $('.size').html(Size);
             $('#size').html(size);
+            $('.size').find('li').eq(0).attr({
+                class: 'Atv'
+            })
             // 数量
             $('.total').html(res.data[0].total)
             // 店铺信息
@@ -236,84 +245,12 @@
     var $charList = $('.char');
     var $add_car = $('.add_car');
 
-    //cookie操作
-    //增，删，查，改
-    var Cookie = {
-        /**
-         * [添加/修改cookie]
-         * @param {String} name    [cookie名]
-         * @param {String} val     [cookie值]
-         * @param {[Date]} expires [cookie有效期]
-         * @param {[String]} path    [cookie保存路径]
-         */
-        set:function(name,val,expires,path){
-            var str = name + '=' + val;
-
-            // 有效期
-            if(expires){
-                str += ';expires=' + expires.toUTCString();
-            }
-
-            // 保存路径
-            if(path){
-                str += ';path=' + path;
-            }
-
-            // 写入cookie
-            document.cookie = str;
-        },
-
-        /**
-         * [删除cookie]
-         * @param  {String} name [要删除的cookie名]
-         * @param  {[String]} path [指定路径]
-         */
-        remove:function(name,path){
-            var now = new Date();
-            now.setDate(now.getDate()-7);
-
-            // document.cookie = name + '=null;expires=' + now.toUTCString();
-            // 利用添加方法达到删除效果
-            this.set(name,'null',now,path);
-        },
-
-        /**
-         * [获取cookie]
-         * @param  {String} name [cookie]
-         * @return {String}      [description]
-         */
-        get:function(name){
-            var res = '';
-
-            // 获取能访问的所有cookie
-            var cookies = document.cookie;
-
-            // 判断是否存在cookie
-            if(!cookies.length){
-                return res;
-            }
-
-            // cookie字符串拆成数组
-            cookies = cookies.split('; ');
-
-            // 遍历数组，找出name对应cookie值
-            for(var i=0;i<cookies.length;i++){
-                // 拆分cookie名和cookie值
-                var arr = cookies[i].split('=');
-                if(arr[0] === name){
-                    res = arr[1];
-                    break;
-                }
-            }
-
-            return res;
-        }
-    }
-    var datalist = Cookie.get('datalist');
-    if(!datalist){
-        datalist = [];
+    // cookies
+    var goodslist = Cookie.get('goodslist');
+    if(!goodslist){
+        goodslist = [];
     }else{
-        datalist = JSON.parse(datalist);
+        goodslist = JSON.parse(goodslist);
     }
     $add_car.on('click',function(){
         // 找该商品的图片
@@ -344,43 +281,90 @@
         }, 1000,function(){
             //删除复制的图片
             $cloneImg.remove();
-        
 
              var Name = $('.detail').find('h3').html();
              var Total = $('.total').html();
              var Price = $('.cost').find('h4 span').html();
              var Img = $('.bigImg').find('img').attr('src');
-
+             var COLOR = $('.color').find('.Atv').html()
+             var SIZE = $('.size').find('.Atv').html();
+             // 获取当前商品id
+            var gid= url_date.id;
             var currentIdx;
-            var res = datalist.some(function(goods,idx){
+
+             // 判断当前商品是否已存在
+            var res = goodslist.some(function(goods,idx){
                 currentIdx = idx;
-                return
+                return goods.gid == gid;
             });
 
             if(res){
                 // 如果商品已经存在，则数量+1
-                datalist[currentIdx].qty++;
+                goodslist[currentIdx].qty++;
+                // console.log( $('#count'))
+                $('#count').html(goodslist[currentIdx].qty);
             }else{
                 // 否则添加商品
                 var goods = {
+                    gid:gid,
                     qty:1,
                     imgurl:Img,
                     name:Name,
-                    price:Price
+                    price:Price,
+                    color:COLOR,
+                    size:SIZE
                 }
 
                 // 把当前商品添加到数组中
-                datalist.push(goods);
+                goodslist.push(goods);
+
+                // var goodslist=Cookie.get('goodslist');
+                // // 判断是否为空
+                // if(goodslist){
+                //     goodslist= JSON.parse(goodslist);
+                // }
+                // var total=0;
+                $('.car ul').html('')
+                var Qty = 0;
+                var ul = goodslist.map(function(goods){
+                    Qty += goods.qty;
+                    // total+=goods.price*goods.qty;
+                    return '<li data-gid="'+goods.gid+'"><i class="close"></i>'
+                            + '<img src="'+goods.imgurl+'">'
+                            + '<p class="prd_name">'+goods.name+'</p>'
+                            + '<p>数量为<span id="count">'+goods.qty+'</span>件</p><span class="prd_price">'+goods.price+'</span>'                   
+                    + '</li>'
+                }).join('');
+                $('.car ul').append(ul);
+                $('.car_sum').html(goods.qty)
             }
-            Cookie.set('datalist',JSON.stringify(datalist));
+            Cookie.set('goodslist',JSON.stringify(goodslist));
         });
 
         $('.car').on('click','.close',function(){
-                $(this).closest('li').remove();
-            });
+            $(this).closest('li').remove();
+        });
     });
 
+    $('.car').find('li').on('click','i',function(){
+        var currentLi=this.parentNode;
+        // 删除当前li
+        var newTotal=1*0;
+        currentLi.parentNode.removeChild(currentLi);
+        console.log(goodslist.length)
+        for(var i=0;i<goodslist.length;i++){
+           if(goodslist[i].gid === currentLi.getAttribute('data-gid')){
 
+             newTotal=goodslist[i].price.slice(1)*goodslist[i].qty*1;     
+             goodslist.splice(i,1);
 
-
-})(jQuery)
+           }
+        } 
+      
+       if(goodslist){
+         Cookie.set('goodslist',JSON.stringify(goodslist));                   
+       }
+    });
+    });
+});
+});

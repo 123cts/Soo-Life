@@ -1,9 +1,11 @@
-jQuery(function($){
-    //加载头部
+
+require(['config'],function(){
+    // 加载common.js
+    require(['jquery','Carousel','index'],function(){
+            //加载头部
     $('.header').load('html/header.html #header',function(){
 
         // 顶部(我的生活,帮助中心,导航更多)点击显示事件
-        
         $('#header_right').on('click','li',function(e){
             var $show = $(this).find('.box')
             if($show.css("display")=="none"){ 
@@ -12,10 +14,23 @@ jQuery(function($){
             }else{ 
                 $show.css("display","none"); 
             } 
+    });
+
+    var url = location.search;
+    var url_date = {};
+    if(url){
+    url = url.slice(1);
+    // 拆分成数组
+    url = url.split('&');
+    // 遍历
+    url.forEach(function(item){
+        var url_arr = item.split('=');
+            url_date[url_arr[0]] = decodeURI(url_arr[1])
         });
-
-
-
+    }else{
+        url = '';
+    }
+    $('.welcome span').html(url_date.name)
     });
     // 加载尾部
     $('.footer').load('html/footer.html');
@@ -57,48 +72,49 @@ jQuery(function($){
         });
         // 获取滚动高度
         var to_top = document.querySelector('.to_top');
-         window.onscroll = function(){
-                var scrollTop = window.scrollY;
+        window.onscroll = function(){
+            var scrollTop = window.scrollY;
 
-                if(scrollY > 500){
-                    to_top.style.display = 'block';
-                }else{
-                    to_top.style.display = 'none';
+            if(scrollY > 500){
+                to_top.style.display = 'block';
+            }else{
+                to_top.style.display = 'none';
+            }
+
+        }
+
+        // 点击楼梯去到相对应的商品位置
+        $('#stairs ul li').click(function(e) {
+             $(document).scrollTop($('.louti .brand').eq($(this).index()).offset().top);  
+             return false;
+        });
+        //返回顶部效果
+        var timer;
+        to_top.onclick = function(){
+            clearInterval(timer);
+            
+            var btn_to_top = window.scrollY;
+
+            timer = setInterval(function(){
+
+                var speed = btn_to_top/10;
+
+                btn_to_top -= speed;
+
+                if(btn_to_top<=0 || speed<5){
+                    clearInterval(timer);
+                    btn_to_top = 0;
                 }
+                scrollTo(0,btn_to_top);
+            }, 20);
+        }
 
-            }
+        // var car = document.querySelector('.cart');
 
-            // 点击楼梯去到相对应的商品位置
-            $('#stairs ul li').click(function(e) {
-                 $(document).scrollTop($('.louti .brand').eq($(this).index()).offset().top);  
-                 return false;
-            });
-            //返回顶部效果
-            var timer;
-             to_top.onclick = function(){
-                clearInterval(timer);
-                
-                var btn_to_top = window.scrollY;
-
-                timer = setInterval(function(){
-
-                    var speed = btn_to_top/10;
-
-                    btn_to_top -= speed;
-
-                    if(btn_to_top<=0 || speed<5){
-                        clearInterval(timer);
-                        btn_to_top = 0;
-                    }
-                    scrollTo(0,btn_to_top);
-                }, 20);
-            }
-
+        $('.cart a').on('click',function(){
+            location.href="../html/car.html"
+        })
     });
-    
-   
-  
-
     // 实现轮播图效果
     $('#banner').Carousel({
         width:'100%',
@@ -107,5 +123,5 @@ jQuery(function($){
         buttons:false,
         imgs:["../img/banner1.jpg","../img/banner2.jpg","../img/banner3.jpg","../img/banner4.jpg","../img/banner5.jpg","../img/banner6.jpg","../img/banner7.jpg"]
     });
-
+    });
 });

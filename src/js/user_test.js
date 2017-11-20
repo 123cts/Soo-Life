@@ -1,4 +1,6 @@
- jQuery(function($){
+require(['config'],function(){
+    // 加载common.js
+    require(['jquery','user_test'],function(){
 
     // 加载底部页面
     $('.footer').load('../html/footer.html');
@@ -25,18 +27,18 @@
             if(xhr_phone.status === 200 || xhr_phone.status === 304){
                 var res = xhr_phone.responseText;
                 console.log(res)
-                if(res === 'yes'){
-                    tell.classList.remove('no');
-                    tell.classList.add('yes');
-                    error_hint.innerHTML = '';
-                }else if(res === 'no'){
+                if(res === 'no'){
                     tell.classList.remove('yes');
                     tell.classList.add('no');
                     error_hint.innerHTML = '你输入的手机号码已存在';
+                }else if(res === 'YES'){
+                    tell.classList.remove('no');
+                    tell.classList.add('yes');
+                    error_hint.innerHTML = '';
                 }
             }
         }
-        xhr_phone.open('get','http://localhost:3004/api/user_test.php?userphone='+ _phone,true);
+         xhr_phone.open('get','http://localhost:3004/api/user_test.php?username='+ _phone,true);
         xhr_phone.send();
     }
 
@@ -67,16 +69,16 @@
 
     // 获取验证码
     gain_verify.onclick = function(e){
-        首先判断起前面的用户是否为空
-        if(phone.value == ''){
-            error_hint.innerHTML = '请输入正确的号码';
-             return false;
-        }
-        // 然后判断前面的验证码是否正确
-        if(icode.value != code.innerText || icode.value == ''){
-            error_hint.innerHTML = '验证码错误，请重新输入';
-            return false;
-        }
+        // 首先判断起前面的用户是否为空
+        // if(phone.value == ''){
+        //     error_hint.innerHTML = '请输入正确的号码';
+        //      return false;
+        // }
+        // // 然后判断前面的验证码是否正确
+        // if(icode.value != code.innerText || icode.value == ''){
+        //     error_hint.innerHTML = '验证码错误，请重新输入';
+        //     return false;
+        // }
        
        //验证码倒计时
        //设置时间
@@ -87,7 +89,6 @@
             gain_verify.innerText=sec+'s后重新获取';
             sec--;
             error_hint.innerHTML = '验证码已发送，请及时输入';
-            console.log(sec)
             if(sec == 0){
                 clearInterval(timer)
                 gain_verify.innerText = '获取验证码';
@@ -101,6 +102,7 @@
 
     // 第一次输入密码
     var password = document.getElementById('password');
+
     var psw = document.querySelector('.psw');
     password.onblur = function(e){
         var _password = password.value;
@@ -143,13 +145,30 @@
             error_hint.innerHTML = '验证码错误，请重新输入';
             return false;
         }
-        if(password.value === ''){
-            error_hint.innerHTML = '请输入密码';
-            return false;
-        }
+        // if(password.value === ''){
+        //     error_hint.innerHTML = '请输入密码';
+        //     return false;
+        // }
         if(check_pws.value === ''){
             error_hint.innerHTML = '请输入确认密码';
             return false;
         }
+
+        var name = phone.value;
+        var pas =password.value;
+        console.log(name,pas);
+        var xhr_test = new XMLHttpRequest();
+        xhr_test.onload = function(){
+            if(xhr_test.status === 200 || xhr_test.status === 304){
+                var res = xhr_test.responseText;
+                console.log(res)
+                
+            }
+        }
+        xhr_test.open('get','http://localhost:3004/api/user_test.php?username='+ name+'&password='+pas,true);
+        xhr_test.send();
+        alert('注册成功')
+        return false;
     }
+    });
 });

@@ -175,6 +175,9 @@
                                 margin:4px 5px 0 0;
                             }
                         }
+                        .Atv{
+                            background:#EC913F;
+                        }
                     }
 
                     >li:last-child{
@@ -249,7 +252,7 @@
 }
 
 .buyCar{
-    width: 320px;height: 100%;position:fixed;right:35px;top:0;background-color:#fff;box-shadow: -2px 0px 4px rgba(55, 55, 55, 0.4);padding:15px;
+    width: 320px;height: 100%;position:fixed;right:35px;top:0;background-color:#fff;box-shadow: -2px 0px 4px rgba(55, 55, 55, 0.4);padding:15px;display:none;
     h3{
         height: 30px;margin-top:70px;font-size:18px;color:#333;position:relative;border-bottom:1px solid #eee;
         i{display:block;width: 45px;height: 45px;background:url('../img/sprite.fw.png') 0 -420px no-repeat;position:absolute;right:-14px;top:-87px;
@@ -271,10 +274,11 @@
             .close{
                 display:block;width: 15px;height: 22px;position:absolute;right:5px;top:0;background:url('../img/sprite.fw.png') -70px -430px no-repeat;
             }
-            .close :hover{
-                background-color:#000;
-            }
         }
+        }
+
+        #goCar{
+            display:block;height: 40px;background-color:#F3A500;width: 280px;border-radius:5px;margin:10px 20px;line-height: 40px;font-size:16px;text-align:center;color:#fff;
         }
         
     }

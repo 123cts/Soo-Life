@@ -1,0 +1,269 @@
+body {
+  background-color: #FBFBFB;
+}
+
+.car_logo {
+  height: 110px;
+}
+
+.car_logo .container h3 {
+  height: 110px;
+  background: url("../img/car_logo.png");
+}
+
+#buyCar .container p {
+  height: 40px;
+  line-height: 40px;
+  font-size: 16px;
+  color: #F7B200;
+}
+
+#buyCar .container .goodsTitle {
+  font-size: 12px;
+  height: 40px;
+  line-height: 40px;
+}
+
+#buyCar .container .goodsTitle .sle_All {
+  float: left;
+  padding-right: 100px;
+  width: 100px;
+}
+
+#buyCar .container .goodsTitle .sle_All input {
+  margin-right: 50px;
+}
+
+#buyCar .container .goodsTitle .xinxi {
+  width: 80px;
+  float: left;
+  margin: 0 122px;
+}
+
+#buyCar .container .goodsTitle .jiage {
+  float: left;
+  margin: 0 95px;
+  width: 81px;
+}
+
+#buyCar .container .goodsTitle .shuliang {
+  float: left;
+  width: 70px;
+  text-align: center;
+}
+
+#buyCar .container .goodsTitle .xiaoji {
+  float: left;
+  width: 100px;
+  text-align: center;
+  margin: 0 30px;
+}
+
+#buyCar .container .shangpin {
+  padding-top: 22px;
+}
+
+#buyCar .container .shangpin ul li {
+  height: 170px;
+  border-top: 1px solid #DCDCDC;
+  border-bottom: 1px solid #DCDCDC;
+  background-color: #FFF4E8;
+  box-shadow: 0 2px 3px 0px #DCDCDC;
+}
+
+#buyCar .container .shangpin ul li h4 {
+  height: 38px;
+  font-size: 14px;
+  line-height: 38px;
+  padding-left: 10px;
+  background-color: #fff;
+}
+
+#buyCar .container .shangpin ul li .Xinxi {
+  padding-top: 40px;
+  padding-left: 40px;
+}
+
+#buyCar .container .shangpin ul li .Xinxi img {
+  display: block;
+  width: 82px;
+  height: 82px;
+  float: left;
+}
+
+#buyCar .container .shangpin ul li .Xinxi .a1 {
+  float: left;
+  font-size: 12px;
+}
+
+#buyCar .container .shangpin ul li .Xinxi .a1 span {
+  display: block;
+  float: left;
+}
+
+#buyCar .container .shangpin ul li .Xinxi .a1 .goodsName {
+  width: 200px;
+  padding: 0 15px;
+  color: #8EA0DB;
+}
+
+#buyCar .container .shangpin ul li .Xinxi .a1 .goodsSize {
+  width: 200px;
+  font-size: 12px;
+}
+
+#buyCar .container .shangpin ul li .Xinxi .a2 {
+  float: left;
+  width: 180px;
+  font-size: 12px;
+  text-align: center;
+}
+
+#buyCar .container .shangpin ul li .Xinxi .a3 {
+  float: left;
+  padding-left: 50px;
+  width: 105px;
+  height: 20px;
+}
+
+#buyCar .container .shangpin ul li .Xinxi .a3 button {
+  background-color: #F9F9F9;
+  float: left;
+  border: none;
+  width: 26px;
+  height: 26px;
+  border: 1px solid #ccc;
+}
+
+#buyCar .container .shangpin ul li .Xinxi .a3 .total {
+  width: 50px;
+  border: 1px solid #ccc;
+  float: left;
+  height: 24px;
+  text-align: center;
+}
+
+#buyCar .container .shangpin ul li .Xinxi .a4 {
+  float: left;
+  width: 100px;
+  font-weight: bold;
+  text-align: center;
+  font-size: 12px;
+  color: #CC0000;
+}
+
+#buyCar .container .shangpin ul li .Xinxi .a5 {
+  float: left;
+  width: 60px;
+  padding-left: 40px;
+}
+
+#buyCar .container .shangpin ul li .Xinxi .a5 i {
+  display: block;
+  width: 18px;
+  height: 22px;
+  background: url("../img/sprite.fw.png") -572px -148px;
+}
+
+#buyCar .container .caozuo {
+  height: 48px;
+  border-top: 1px solid #DCDCDC;
+  border-bottom: 1px solid #DCDCDC;
+  margin-top: 22px;
+}
+
+#buyCar .container .caozuo .sel_All {
+  width: 120px;
+  line-height: 50px;
+  float: left;
+  font-size: 12px;
+}
+
+#buyCar .container .caozuo .jiesuan {
+  float: right;
+}
+
+#buyCar .container .caozuo .jiesuan p {
+  float: left;
+  width: 110px;
+  font-size: 12px;
+  color: #333;
+}
+
+#buyCar .container .caozuo .jiesuan p span {
+  color: #F6AB00;
+}
+
+#buyCar .container .caozuo .jiesuan .zongjia {
+  float: left;
+  width: 150px;
+  font-size: 12px;
+  margin-top: 10px;
+}
+
+#buyCar .container .caozuo .jiesuan .zongjia span {
+  color: #F6AB00;
+  font-size: 18px;
+}
+
+#buyCar .container .caozuo .jiesuan button {
+  display: block;
+  float: left;
+  width: 96px;
+  height: 48px;
+  background-color: #F6AB00;
+  text-align: center;
+  line-height: 50px;
+  color: #fff;
+  border: none;
+}
+
+.veiw .container h5 {
+  height: 59px;
+  line-height: 59px;
+  font-size: 14px;
+}
+
+.veiw .container .like {
+  height: 300px;
+}
+
+.veiw .container .like ul {
+  height: 300px;
+}
+
+.veiw .container .like ul li {
+  float: left;
+  margin-right: 10px;
+  width: 237px;
+  height: 260px;
+  padding: 20px;
+  box-shadow: 2px 1px 3px 2px #DCDCDC;
+}
+
+.veiw .container .like ul li img {
+  width: 160px;
+  height: 160px;
+  margin: 0 33px;
+}
+
+.veiw .container .like ul li p {
+  height: 30px;
+  line-height: 30px;
+  font-size: 12px;
+}
+
+.veiw .container .like ul li .name {
+  color: #333;
+}
+
+.veiw .container .like ul li button {
+  width: 130px;
+  height: 30px;
+  text-align: center;
+  background: #CC0000;
+  line-height: 30px;
+  margin-left: 50px;
+  border: none;
+  border-radius: 5px;
+}

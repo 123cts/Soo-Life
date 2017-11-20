@@ -26,26 +26,28 @@
                         <i class="iconfont icon-mima"></i>
                         <input type="text" placeholder="密码" id="Password"/>
                     </div>
+                    <lable class="l_alert"></lable>
                     <div class="log">
                         <label><input type="checkBox" />记住用户名</label>
                         <span id="forget" >忘记密码</span>
                     </div>
                     <div class="log">
-                        <button>登录</button>
+                        <button id="denglu">登录</button>
                     </div>
                     <div class="zc">
-                        <span>没有账号？30S快速<a href="#">注册</a></span>
+                        <span>没有账号？30S快速<a href="../html/user_test.html">注册</a></span>
                     </div>
                     <div class="outher">
                         <span>使用合作网站账号登录：</span>
-                        <a href="#"><i></i>QQ</a>
-                        <a href="#"><i></i>微信</a>
+                        <a href="#">QQ</a>
+                        <a href="#">微信</a>
                     </div>
                 </form>
             </div>
         </div>
     </div>
-    <script src="../js/jquery-3.2.1.js"></script>
-    <script src="../js/login.js"></script>
+<!--     <script src="../js/jquery-3.2.1.js"></script>
+    <script src="../js/login.js"></script> -->
+    <script src="../js/require.js"  data-main="../js/login"></script>
 </body>
 </html>

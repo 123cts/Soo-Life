@@ -1,6 +1,7 @@
-(function($){
-
-    // 加载头部
+require(['config'],function(){
+    // 加载common.js
+    require(['jquery','list_pages'],function($){
+            // 加载头部
     $('.header').load("../html/header.html #header",function(){
         // 头部移入效果
         // 创建节点
@@ -150,7 +151,7 @@
     xhr_goods.onload = function(){
         if(xhr_goods.status == 200 || xhr_goods.status == 304){
             var res =JSON.parse(xhr_goods.responseText);
-           
+     
             var list = res.data.map(function(item){ 
                 var img= JSON.parse(item.Imgurl);
                 // var aa = item.Imgurl
@@ -286,4 +287,5 @@
     xhr_goods_hot.open("get",`../api/goods_hot.php?pageNo=${hotNo}&qty=${hotqty}`,true);
     xhr_goods_hot.send();
 
-})(jQuery);
+    });
+});

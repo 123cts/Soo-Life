@@ -19,6 +19,7 @@ $sprite:url('../img/sprite.fw.png');
             }
 
             form{padding:0 23px;background-color:#fff;height: 323px;
+
                 .log{
                     height: 40px;margin-top:20px;position:relative;
                     i{position:absolute;left:7px;top:7px;font-size:24px;color:#ccc}
@@ -31,6 +32,22 @@ $sprite:url('../img/sprite.fw.png');
                     label,span{font-size:12px;line-height: 40px;float:left;}
                     #forget{position:absolute;right:10px;}
                 }
+                .zc{
+                    height: 30px;
+                    span{display:block;float:right;font-size:10px;line-height: 30px;}
+                }
+                .outher{
+                    height: 30px;line-height: 30px;
+                    span{font-size:14px;display:block;}
+                    a{  position:relative;color:#333;
+                        display:block;font-size:12px;width: 50px;float:left;text-align:center;
+                    }
+
+                }
+                .l_alert{
+                    display:block;height: 20px;font-size:10px;line-height: 20px;position:absolute;color:#f00;
+                }
+               
             }
         }
     }

@@ -389,6 +389,10 @@
   margin: 4px 5px 0 0;
 }
 
+.xq .container .del .detail .prod_size > li:nth-child(4) .Atv, .xq .container .del .detail .prod_size > li:nth-child(5) .Atv {
+  background: #EC913F;
+}
+
 .xq .container .del .detail .prod_size > li:last-child {
   height: 30px;
   margin-top: 20px;
@@ -515,6 +519,7 @@
   background-color: #fff;
   box-shadow: -2px 0px 4px rgba(55, 55, 55, 0.4);
   padding: 15px;
+  display: none;
 }
 
 .buyCar h3 {
@@ -578,6 +583,15 @@
   background: url("../img/sprite.fw.png") -70px -430px no-repeat;
 }
 
-.buyCar .car ul li .close :hover {
-  background-color: #000;
+.buyCar .car #goCar {
+  display: block;
+  height: 40px;
+  background-color: #F3A500;
+  width: 280px;
+  border-radius: 5px;
+  margin: 10px 20px;
+  line-height: 40px;
+  font-size: 16px;
+  text-align: center;
+  color: #fff;
 }

@@ -208,7 +208,7 @@ var Cookie = {
 	* 支持多属性同时运动
 	* 支持回调函数
  */
-function animate(ele,opt,callback){
+function animate1(ele,opt,callback){
 	var timerQty = 0;
 	for(var attr in opt){
 		// 记录动画数量
